@@ -12,7 +12,7 @@ function main(){
             mes_extenso = "Janeiro"
         break;
         case 2:
-            mes_extenso = "JFevereiro"
+            mes_extenso = "Fevereiro"
         break;
         case 3:
             mes_extenso = "Março"
