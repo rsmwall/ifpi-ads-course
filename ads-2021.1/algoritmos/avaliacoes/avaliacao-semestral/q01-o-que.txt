@@ -1,0 +1,17 @@
+Questão 01) O que é, e para que é?
+
+a) Pensamento Computacional:
+
+    É uma estratégia usada para desenhar soluções e solucionar problemas de maneira eficaz tendo a tecnologia como base. Serve para o desenvolvimento cognitivo, trabalha com raciocínio lógico, capacidade de aprendizado, planejamento, resolução de problemas, autonomia, etc.
+
+b) Algoritmo:
+
+    É uma sequência finita de ações executáveis que visam obter uma solução para um determinado tipo de problema. Bastante usado para mediação, automação e evolução.
+
+c) Programação:
+
+    É o processo de escrita, teste e manutenção de um programa de computador. Serve para a criação, desenvolvimento e manutenção de softwares como aplicativos, jogos, sistemas web, além de sistemas web.
+
+d) Modularização com uso de Funções:
+
+    Conceito empregado para dividir o programa em partes funcionais, partes essas que conversam umas com as outras. Facilita a detecção de erros, torna mais fácil testes de módulos individuais, facilita a manutenção do código, permite um desenvolvimento individual de cada módulo e a possibilidade de reutilização de código, evitando redundância desnecessária.
