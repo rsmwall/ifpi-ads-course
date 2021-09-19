@@ -4,20 +4,15 @@ de seus divisores. (flag número = 0)
 */
 
 #include <stdio.h>
-#include <iostream>
-#include <windows.h>
-
-using namespace std;
 
 int main(){
-    SetConsoleOutputCP(CP_UTF8);
 
     int num;
 
     for( ; num != 0; ){
-        cout << "Digite um número: ";
-        cin >> num;
+        printf("DIgite um número: ");
+        scanf("%d", &num);
 
-        cout << "Número: " << num << "\n";
+        printf("Número: %d\n", num);
     }
 }
