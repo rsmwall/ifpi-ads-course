@@ -1,5 +1,5 @@
 /*
-eia um vetor A com N elementos e escreva um vetor B com N elementos, conforme a
+Leia um vetor A com N elementos e escreva um vetor B com N elementos, conforme a
 seguinte condição: se índice de A[índice] é par então B[índice] = 0, caso contrário B[índice]
 = 1
 */
