@@ -39,7 +39,7 @@ int main(){
         printf("%d ", b[l]);
     }
 
-    printf("\nc: ");
+    printf("\nC: ");
 
     for(int l = 0; l < 2*n; l++){
         printf("%d ", c[l]);
