@@ -1,0 +1,8 @@
+5. Identifique pelo menos 5 objetos de um sistema de controle acadêmico. Ex: aluno.
+
+    1. Professor
+    2. Disciplina
+    3. Curso
+    4. Período
+    5. Turma
+    6. Prova

@@ -1,0 +1,17 @@
+2. De forma breve, conceitue atributos e métodos. Pesquise e exemplifique um
+   exemplo de objeto que possua atributos e métodos (notação livre).
+
+Atributos:
+    Características de um objeto, ou as variáveis.
+
+Métodos:
+    São as ações ou funções do objeto que são realizadas quando chamadas
+    em alguma parte do código, podendo ser iterações com outros objetos ou não.
+
+Exemplificação:
+
+    Na classe Cachorro temos como exemplos de atributos: cor, raça, peso, altura, etc..., 
+    basicamente características dele..
+
+    Levando em conta que métodos são ações, no caso do Cachorro, ele poderia ter métodos como:
+    pular, correr, latir, etc...

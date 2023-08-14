@@ -1,0 +1,46 @@
+6. Imagine um jogo qualquer. Identifique o máximo de objetos possíveis e eventuais
+   características (atributos) e comportamentos (métodos) que os mesmos poderiam ter.
+
+   1. Player
+        características:
+            . espécie
+            . altura(pixels)
+            . poder
+            . arma
+            . posição
+        
+        métodos:
+            . atacar
+            . usar poder
+            . pular
+            . andar
+    
+    2. Plataforma Móvel
+        características:
+            . tamanho
+            . tipo
+            . direção
+        
+        métodos:
+            . mover
+            . auto destruir
+    
+    3. Inimigo
+        características:
+            . arma
+            . poder
+            . posição
+        
+        métodos:
+            . andar
+            . atacar
+            . perseguir Player
+
+    4. Bloco destrutível
+        características:
+            . textura
+            . posição
+        
+        métodos:
+            . dropar item
+            . ser destruído

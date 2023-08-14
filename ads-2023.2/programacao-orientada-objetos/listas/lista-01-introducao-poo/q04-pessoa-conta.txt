@@ -1,0 +1,11 @@
+4. Considerando os objetos Pessoa e Conta:
+    a. Seria interessante em um sistema bancário um objeto "conta" possuir uma
+    "pessoa" como um atributo interno representando o titular da conta?
+
+        - Sim, podendo ser o atributo pessoa uma referência a um objeto Pessoa.
+
+    b. Olhando no sentido inverso, seria interessante uma pessoa possuir mais de
+    uma conta como atributo? Que elemento da programação estruturada melhor
+    representaria o conjunto de contas de uma pessoa?
+
+        - Sim, array.

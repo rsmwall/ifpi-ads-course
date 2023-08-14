@@ -1,0 +1,22 @@
+1. Qual a diferença entre objetos e classes? Exemplifique.
+
+Objetos:
+    Coisa do mundo real ou imaginário que podemos representar.
+    Possuem características próprias e comportamentos específicos,
+    podem ser categorizados e agrupados.
+
+Classes:
+    Descrição de um conjunto de objetos que compartilham os mesmos atributos, 
+    operações, relacionamento e semântica.
+    Representação de um conjunto de objetos.
+
+Exemplificação:
+
+    No jogo de cartas Yu-Gi-Oh!, existem diferentes tipos de carta, mágicas, armadilha, monstros...
+
+    A carta em si seria a classe, um conceito abstrato que teria dentro de si um conjunto de cartas
+    com características próprias. Todas as cartas possuem o mesmo formato, com nome, imagem, atributo
+    e descrição.
+
+    Cada tipo de carta seria um objeto com suas características, cartas monstro sendo amarelas com nível e poder, cartas
+    de magia sendo verdes e cartas de armadilha sendo roxas.
