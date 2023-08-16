@@ -1,0 +1,6 @@
+3. Leia duas strings e compare, se elas forem iguais, imprima “São iguais”, senão imprima “São
+   diferentes!!”:
+    C) Qual as diferenças nos códigos A e B que você encontrou?
+
+        - Para saber o tamanho do char, foi preciso usar <string.h> e strlen(). Ja para saber em string
+          foi preciso em primeiro lugar usar <iostream> e para saber o tamanho, foi usado .length()
