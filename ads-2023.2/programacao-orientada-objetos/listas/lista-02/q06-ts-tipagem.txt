@@ -1,0 +1,5 @@
+6. Poderíamos dizer que a tipagem do TypeScript é fraca por uma variável do tipo
+   number aceitar tanto inteiros como ponto flutuante?
+
+    Não, a aceitação de números inteiros e ponto flutuante pela variável do tipo 
+    number é um comportamento esperado e definido pela linguagem.

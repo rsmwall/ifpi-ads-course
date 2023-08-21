@@ -1,0 +1,3 @@
+2. Qual o principal problema do uso de tipagem dinâmica?
+
+    A maior chance de erros em tempo de execução.
