@@ -1,0 +1,8 @@
+a) estradas entre cidades de um mapa 
+    - GRAFO
+b) estrutura organizacional de uma empresa
+    - ARVORE
+c) fila de impressao em um sistema operacional
+    - LISTA
+d) estrutura de diretorios em um sistema operacional
+    - ARVORE

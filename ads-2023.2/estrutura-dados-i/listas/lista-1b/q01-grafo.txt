@@ -1,0 +1,6 @@
+a) nao e um conjunto
+    - porque segue uma ordem
+b) nao e uma lista
+    - porque a ordem nao e sequencial
+c) nao e uma arvore
+    - porque nao esta em uma ordem hierarquica
