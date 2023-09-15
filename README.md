@@ -101,11 +101,6 @@ This subject has its exercises solved in C/C++.
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/-Java-0D1117?style=for-the-badge&logo=openjdk&logoColor=E51F24&labelColor=181e26&textColor=0D1117">&nbsp;
-  <img src="https://img.shields.io/badge/-Java-white?style=for-the-badge&logo=openjdk&logoColor=E51F24&labelColor=f0f0f0&textColor=0D1117">&nbsp;
-</picture>
-
-<picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/-Node%20js-0D1117?style=for-the-badge&logo=nodedotjs&logoColor=339933&labelColor=181e26&textColor=0D1117">&nbsp;
   <img src="https://img.shields.io/badge/-Node%20js-white?style=for-the-badge&logo=nodedotjs&logoColor=339933&labelColor=f0f0f0&textColor=0D1117">&nbsp;
 </picture>
