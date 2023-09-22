@@ -1,0 +1,12 @@
+Faça um Diagrama de Classes do subsistema de Operação de Trem, sem utilizar herança e  considerando o seguinte:
+
+Um trem pode ser de carga, passageiros ou ambos e pode ser movido por um ou mais  vagões com força motriz.
+Um  vagão  com  força  motriz  possui  um  determinado  tipo  de  motor,  com	potência
+específica.
+O trem de passageiros pode possuir várias portas por vagão, que devem abrir e fechar  automaticamente, ao chegar na estação e antes de partir, respectivamente.
+A capacidade de passageiros de um trem deve estar registrada em quantidade, e a capacidade de cada vagão de carga em metros cúbicos
+Cada trem possui uma rota que deve ser seguida durante a viagem.
+A data de início de trabalho de cada vagão deve ser registrada.
+A velocidade do trem deve ser controlada automaticamente. Ao arrancar ele deverá  estar ganhando velocidade, e ao logo da viagem deverá manter outra velocidade e  estando a uma determinada distância da estação deverá reduzir a velocidade para  parar.
+Os segmentos de trilho iniciam e terminam em um determinado quilômetro.
+A localização do trem numa ferrovia deve ser possível.
