@@ -30,3 +30,6 @@ Class Vagao {
 Trem "1" -- "1..*" Vagao
 
 @enduml
+
+'2021111TADS0189 Rafael Ribeiro da Silva
+'2023211TADS0008 Sabrina Maria Silva Oliveira
