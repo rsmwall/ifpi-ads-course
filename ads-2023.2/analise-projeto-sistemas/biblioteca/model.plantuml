@@ -1,0 +1,56 @@
+@startuml Biblioteca
+!theme aws-orange
+
+    class Biblioteca {
+        
+    }
+
+    class Funcionario {
+        nome : string
+        matFunc : Integer
+    }
+
+    class Leitor { 
+         nome : string 
+         codLeitor : Integer
+    }
+    class Publicacao {
+        codPublcacao:
+        titulo:
+        anoPublica: 
+    }
+
+    class Revista {
+        dtPublicacao: 
+    }
+
+    class Livro {
+        codISBN:
+    }
+
+    class Jornal {
+        tituloMateria:
+        nomeJornal:
+        cidadePublcacao:
+        dTpublicacao:
+    }
+
+    class Emprestimo {
+    }
+
+    class Reserva {
+
+    }
+
+    Biblioteca "1" o-- "1..*" Funcionario
+    Biblioteca "1..*" o-- "1..*" Leitor
+    Biblioteca "1..*" o-- "1..*" Publicacao
+    Funcionario "1" --* "0..*" Reserva
+    Funcionario --* "" Emprestimo
+    Publicacao <|-- Jornal
+    Publicacao <|-- Livro
+    Publicacao <|-- Revista
+    Leitor --* Emprestimo
+    Leitor --* Reserva
+
+@enduml
