@@ -1,5 +1,5 @@
 @startuml Biblioteca
-!theme aws-orange
+!theme materia-outline
 
     class Biblioteca {
         
@@ -10,14 +10,14 @@
         matFunc : Integer
     }
 
-    class Leitor { 
-         nome : string 
-         codLeitor : Integer
-    }
     class Publicacao {
         codPublcacao:
         titulo:
         anoPublica: 
+    }
+
+    class Exemplar {
+
     }
 
     class Revista {
@@ -42,15 +42,16 @@
 
     }
 
-    Biblioteca "1" o-- "1..*" Funcionario
-    Biblioteca "1..*" o-- "1..*" Leitor
-    Biblioteca "1..*" o-- "1..*" Publicacao
-    Funcionario "1" --* "0..*" Reserva
-    Funcionario --* "" Emprestimo
+    Biblioteca "1" -- "1..*" Funcionario
+    Biblioteca "1..*" -- "1..*" Publicacao
+    Funcionario "1" -- "0..*" Reserva
+    Funcionario "1" -- "1..*" Emprestimo
+    Exemplar -- Publicacao
+    Emprestimo --o Exemplar
+    Reserva --o Publicacao
     Publicacao <|-- Jornal
     Publicacao <|-- Livro
     Publicacao <|-- Revista
-    Leitor --* Emprestimo
-    Leitor --* Reserva
+    
 
 @enduml
