@@ -24,7 +24,7 @@ export class Professor extends Funcionario {
     }
 
     public calcularSalarioSegundaParcela(): number {
-        return 0
+        return 0.00
     }
 
     get titulacao() {
@@ -32,8 +32,8 @@ export class Professor extends Funcionario {
     }
 }
 
-let prof: Professor = new Professor("Rafael", "Silva", "2021111", 1320, "TI")
-console.log(`Funcionario: ${prof.nomeCompleto}
+let prof: Professor = new Professor("Rafael", "Silva", "2021111", 1320, "Dr.")
+console.log(`Funcionario: ${prof.titulacao} ${prof.nomeCompleto}
 Matricula: ${prof.matricula}
 Salario: ${prof.salario}
 Salario (primeira parcela): ${prof.calcularSalarioPrimeiraParcela()}

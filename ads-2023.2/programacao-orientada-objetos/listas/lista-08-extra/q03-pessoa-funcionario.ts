@@ -27,7 +27,8 @@ export class Funcionario extends Pessoa {
     }
 
     public calcularSalarioSegundaParcela(): number {
-        return this._salario * 0.4
+        //return this._salario * 0.4
+        return this._salario - this.calcularSalarioPrimeiraParcela()
     }
 
     get matricula() {
@@ -39,9 +40,9 @@ export class Funcionario extends Pessoa {
     }
 }
 
-// let func: Funcionario = new Funcionario("Rafael", "Silva", "2021111", 1320)
-// console.log(`Funcionario: ${func.nomeCompleto}
-// Matricula: ${func.matricula}
-// Salario: ${func.salario}
-// Salario (primeira parcela): ${func.calcularSalarioPrimeiraParcela()}
-// Salario (segunda parcela): ${func.calcularSalarioSegundaParcela()}`);
+let func: Funcionario = new Funcionario("Rafael", "Silva", "2021111", 1320)
+console.log(`Funcionario: ${func.nomeCompleto}
+Matricula: ${func.matricula}
+Salario: ${func.salario}
+Salario (primeira parcela): ${func.calcularSalarioPrimeiraParcela()}
+Salario (segunda parcela): ${func.calcularSalarioSegundaParcela()}`);

@@ -23,7 +23,7 @@
 */
 
 class Empregado {
-    private _salario: number = 500
+    private _salario: number = 500.00
 
     public calcularSalario(): number {
         return this._salario
@@ -36,19 +36,21 @@ class Empregado {
 
 class Diarista extends Empregado {
     public calcularSalario(): number {
-        return this.salario / 30
+        //return this.salario / 30
+        return super.calcularSalario() / 30
     }
 }
 
 class Horista extends Diarista {
     public calcularSalario(): number {
-        return this.salario / 24
+       // return this.salario / 24
+       return super.calcularSalario() / 24
     }
 }
 
-let emp: Empregado = new Empregado
-let dia: Diarista = new Diarista
-let hor: Horista = new Horista
+let emp: Empregado = new Empregado()
+let dia: Diarista = new Diarista()
+let hor: Horista = new Horista()
 
 console.log(emp.calcularSalario())
 console.log(dia.calcularSalario())

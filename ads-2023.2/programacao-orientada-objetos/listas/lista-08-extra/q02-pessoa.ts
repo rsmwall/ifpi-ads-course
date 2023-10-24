@@ -31,5 +31,5 @@ export class Pessoa {
     }
 }
 
-// let pessoa: Pessoa = new Pessoa("Rafael", "Silva")
-// console.log(pessoa.nomeCompleto)
+let pessoa: Pessoa = new Pessoa("Rafael", "Silva")
+console.log(pessoa.nomeCompleto)
