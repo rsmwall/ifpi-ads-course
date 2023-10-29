@@ -1,39 +1,36 @@
-class Conta {
-    numero: string;
+export class Conta {
+    numero: string
     nome: string
-    saldo: number;
+    saldo: number
 
     constructor(numero: string, nome: string, saldo: number) {
-        this.numero = numero;
-        this.nome = nome;
-        this.saldo = saldo;
-    }
-
-    depositar(valor: number): void {
-        this.saldo = this.saldo + valor;
+        this.numero = numero
+        this.nome = nome
+        this.saldo = saldo
     }
 
     sacar(valor: number): boolean {
-        if (this.saldo - valor < 0) {
-            return false;
+        if (this.saldo >= valor) {
+            this.saldo -= valor
+            return true
         }
-
-        this.saldo = this.saldo - valor;
-        return true;
+        return false
     }
 
-    consultarSaldo(): number {
-        return this.saldo;
+    depositar(valor: number): void {
+        this.saldo += valor
     }
 
-    transferir(contaDestino: Conta, valor: number): boolean {
-        if (!this.sacar(valor)) {
-            return false;
-        }
+    consultar(): number {
+        return this.saldo
+    }
 
-        contaDestino.depositar(valor);
-        return true;
+    transferir(contaDest: Conta, valor: number): boolean {
+        if (this.sacar(valor)) {
+            contaDest.depositar(valor)
+            return true
+        }
+        return false
     }
 }
 
-export { Conta };
