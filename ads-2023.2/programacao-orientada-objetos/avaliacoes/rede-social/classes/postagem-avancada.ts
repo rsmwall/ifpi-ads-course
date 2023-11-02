@@ -1,5 +1,5 @@
-import { Postagem } from "./postagem";
-import { Perfil } from "./perfil";
+import { Postagem } from "./postagem"
+import { Perfil } from "./perfil"
 
 export class PostagemAvancada extends Postagem{
     private _hashtags: string[]

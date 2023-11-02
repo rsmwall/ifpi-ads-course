@@ -1,4 +1,4 @@
-import { Postagem } from "./postagem";
+import { Postagem } from "./postagem"
 
 export class Perfil {
     private _id: number
