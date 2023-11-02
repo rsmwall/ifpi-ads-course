@@ -17,6 +17,15 @@ export class Postagem {
         this._perfil = perfil
     }
 
+    public ehPopular(): boolean {
+        // verifica se o numero de curtidas eh 50% maior que o numero de descurtidas
+        if (this._curtidas == (this._descurtidas * 1.5)) {
+            return true
+        }
+
+        return false
+    }
+
     public get id() : number {
         return this._id
     }
@@ -41,4 +50,12 @@ export class Postagem {
         return this._perfil
     }
     
+    public curtir(): void {
+        this._curtidas++
+    }
+
+    public descurtir(): void {
+        this._descurtidas++
+    }
+
 }

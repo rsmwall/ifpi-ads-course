@@ -45,7 +45,7 @@ class Postagem {
     }
 
     public ehPopular(): boolean {
-        if ((this._curtidas / 3) == (this._descurtidas / 2)){
+        if (this._curtidas == (this._descurtidas * (1 + 0.5))){
             return true
         }
         return false
