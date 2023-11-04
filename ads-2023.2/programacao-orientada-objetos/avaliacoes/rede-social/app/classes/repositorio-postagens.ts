@@ -1,6 +1,6 @@
 import { Postagem } from "./postagem"
-import { Perfil } from "./perfil";
-import { PostagemAvancada } from "./postagem-avancada";
+import { Perfil } from "./perfil"
+import { PostagemAvancada } from "./postagem-avancada"
 
 export class RepositorioDePostagens {
     private _postagens: Postagem[]
@@ -19,7 +19,7 @@ export class RepositorioDePostagens {
     public consultar(id: number = 0, texto: string = "", hashtag: string = "", perfil: Perfil | null = null): Postagem[] {
         const postagensFiltradas = this._postagens.filter((postagem) => {
             return (id != 0 && postagem.id == id) ||
-                   (texto != "" && postagem.texto == texto) ||
+                   (texto != "" && postagem.texto.includes(texto)) ||
                    (perfil != null && postagem.perfil == perfil)
         })
 
