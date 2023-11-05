@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@types/prompt-sync": "^4.2.2",
+    "console-clear": "^1.1.1",
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.10"
+  }
+}

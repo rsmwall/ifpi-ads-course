@@ -21,7 +21,7 @@ export class RedeSocial {
             }
         }
 
-        if (!(existe) && perfil.user != undefined && perfil.email != undefined) {
+        if (!(existe) && perfil.user != undefined && perfil.senha != undefined && perfil.email != undefined) {
             this._repoPerfis.incluir(perfil)
         }
     }   
