@@ -13,7 +13,7 @@ export class RedeSocial {
         this._repoPostagens = repoPostagens
     }
 
-    public incluirPerfil(perfil: Perfil): void {
+    public incluirPerfil(perfil: Perfil): boolean {
         let existe: boolean = false
         for (let i: number = 0; i < this._repoPerfis.perfis.length; i++) {
             if (this._repoPerfis.perfis[i].id == perfil.id) {
@@ -21,9 +21,11 @@ export class RedeSocial {
             }
         }
 
-        if (!(existe) && perfil.user != undefined && perfil.senha != undefined && perfil.email != undefined) {
+        if (!(existe) && perfil.user != undefined && perfil.email != undefined) {
             this._repoPerfis.incluir(perfil)
+            return true
         }
+        return false
     }   
 
     public consultarPerfil(id?: number, user?: string, email?: string): Perfil | null {
