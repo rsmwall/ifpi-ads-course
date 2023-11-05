@@ -14,14 +14,15 @@ export class RedeSocial {
     }
 
     public incluirPerfil(perfil: Perfil): void {
-        const perfilEncontrado = this._repoPerfis.perfis.find((perfilA) => {
-            return (perfilA.id == perfil.id)
-        })
-
-        if (perfilEncontrado == undefined) {
-            if (perfil.user != undefined && perfil.email != undefined) {
-                this._repoPerfis.incluir(perfil)
+        let existe: boolean = false
+        for (let i: number = 0; i < this._repoPerfis.perfis.length; i++) {
+            if (this._repoPerfis.perfis[i].id == perfil.id) {
+                existe = true
             }
+        }
+
+        if (!(existe) && perfil.user != undefined && perfil.email != undefined) {
+            this._repoPerfis.incluir(perfil)
         }
     }   
 
@@ -30,14 +31,15 @@ export class RedeSocial {
     }
 
     public incluirPostagem(postagem: Postagem): void {
-        const postagemEncontrada = this._repoPostagens.postagens.find((postagem) => {
-            return (postagem.id == postagem.id)
-        })
-
-        if (postagemEncontrada == undefined) {
-            if (postagem.texto != undefined && postagem.perfil != undefined) {
-                this._repoPostagens.incluir(postagem)
+        let existe: boolean = false
+        for (let i: number = 0; i < this._repoPostagens.postagens.length; i++) {
+            if (this.repoPostagens.postagens[i].id == postagem.id) {
+                existe = true
             }
+        }
+
+        if (!(existe) && postagem.texto != undefined && postagem.perfil != undefined) {
+            this._repoPostagens.incluir(postagem)
         }
     }
 
