@@ -4,13 +4,12 @@ export class Perfil {
     private _id: number
     private _user: string // alterado nome para user (usuario)
     private _email: string
-    private _postagens: Postagem[]
+    private _postagens: Postagem[] = []
 
-    constructor(id: number, user: string, email: string, postagens: Postagem[]) {
+    constructor(id: number, user: string, email: string) {
         this._id = id
         this._user = user
         this._email = email
-        this._postagens = postagens
     }
     
     public get id() : number {
