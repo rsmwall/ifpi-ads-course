@@ -32,7 +32,7 @@ export class RedeSocial {
         return this._repoPerfis.consultar(id, user, email)
     }
 
-    public incluirPostagem(postagem: Postagem): void {
+    public incluirPostagem(postagem: Postagem): boolean {
         let existe: boolean = false
         for (let i: number = 0; i < this._repoPostagens.postagens.length; i++) {
             if (this.repoPostagens.postagens[i].id == postagem.id) {
@@ -42,7 +42,10 @@ export class RedeSocial {
 
         if (!(existe) && postagem.texto != undefined && postagem.perfil != undefined) {
             this._repoPostagens.incluir(postagem)
+            return true
         }
+
+        return false
     }
 
     public consultarPostagem(id?: number, texto?: string, hashtag?: string, perfil: Perfil | null = null): Postagem[] {

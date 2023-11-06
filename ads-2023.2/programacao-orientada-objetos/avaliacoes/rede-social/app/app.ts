@@ -1,4 +1,3 @@
-import { log } from "console"
 import { Perfil } from "./classes/perfil"
 import { Postagem } from "./classes/postagem"
 import { PostagemAvancada } from "./classes/postagem-avancada"
@@ -9,6 +8,7 @@ import prompt from 'prompt-sync'
 
 let input = prompt()
 let idGlobal: number = 1
+let idPostGlobal = 1
 
 const opcoesDeFormato = {
     hour12: true
@@ -23,9 +23,8 @@ class App {
 
     public menu(): void {
         let opcao: number = 0
-        do {
-            console.clear()
-            console.log(`
+        console.clear()
+        console.log(`
             ███████████                ██████            ███████████                    █████     
             ░░███░░░░░███              ███░░███          ░░███░░░░░███                  ░░███      
              ░███    ░███   ██████    ░███ ░░░   ██████   ░███    ░███  ██████   ██████  ░███ █████
@@ -49,17 +48,159 @@ class App {
 
             opcao = +input("Opcao: ")
 
-            if (opcao == 1) {
-                this.feed()
-            } else if (opcao == 2) {
-                this.cadastrarPerfil()
-            } else if (opcao == 3) {
-                this.consultarPerfil()
-            } else if (opcao == 4) {
-                this.criarPostagem
-            }
-        } while (opcao != 0)
+            switch (opcao) {
+                case 1:
+                    this.feed()
+                    break
+                case 2:
+                    this.cadastrarPerfil()
+                    break
+                case 3:
+                    this.consultarPerfil()
+                    break
+                case 4:
+                    this.criarPostagem()
+                    break
+                case 5:
+                    this.consultarPostId()
+                case 6:
+                    this.consultarPorPerfil()
+                case 7:
+                    this.consultarHashtag()
+                default:
+                    break
+            }  
         console.log("Aplicação encerrada")
+    }
+
+    public consultarHashtag(): void {
+        console.clear()
+        console.log(`
+        ███████████                ██████            ███████████                    █████     
+        ░░███░░░░░███              ███░░███          ░░███░░░░░███                  ░░███      
+         ░███    ░███   ██████    ░███ ░░░   ██████   ░███    ░███  ██████   ██████  ░███ █████
+         ░██████████   ░░░░░███  ███████    ░░░░░███  ░██████████  ███░░███ ███░░███ ░███░░███ 
+         ░███░░░░░███   ███████ ░░░███░      ███████  ░███░░░░░███░███ ░███░███ ░███ ░██████░  
+         ░███    ░███  ███░░███   ░███      ███░░███  ░███    ░███░███ ░███░███ ░███ ░███░░███ 
+         █████   █████░░████████  █████    ░░████████ ███████████ ░░██████ ░░██████  ████ █████
+         ░░░░░   ░░░░░  ░░░░░░░░  ░░░░░      ░░░░░░░░ ░░░░░░░░░░░   ░░░░░░   ░░░░░░  ░░░░ ░░░░░
+        \n
+                                    ❖ CONSULTAR POST POR HASHTAG ❖\n`)
+
+        let hash: string = input("      Hashtag: ")
+                            
+        const postComHashtags = this._redeSocial.repoPostagens.postagens.filter((postagem) => {
+            return (postagem instanceof PostagemAvancada) && (postagem.existeHashtag(hash))
+        })
+
+        let postagens: Postagem[] = postComHashtags
+        for (let i: number = 0; i < postagens.length; i++) {
+            let post: Postagem = postagens[i]
+            console.log(`
+            \x1b[1m@${post.perfil.user}\x1b[0m\n
+            ${post.data.toLocaleString('pt-BR', opcoesDeFormato)}\n
+            ${this.quebrarTextoEmLinhas(post.texto, 50)}`)
+            
+            let hashtags: string = ""
+            if (post instanceof PostagemAvancada) {
+                for (let hash of post.hashtags) {
+                    hashtags += "#" + hash + " "
+                }
+                console.log(`\n            \x1b[94m${hashtags}\x1b[0m`)
+                this._redeSocial.decrementarVisualizacoes(post)
+            }
+
+            console.log(`
+            ▲ ${post.curtidas}    ▼ ${post.descurtidas}\n`)
+        }  
+
+        input("\nPressione Enter para retornar ao menu...")
+        this.menu()
+    }
+
+    public consultarPorPerfil(): void {
+        console.clear()
+        console.log(`
+        ███████████                ██████            ███████████                    █████     
+        ░░███░░░░░███              ███░░███          ░░███░░░░░███                  ░░███      
+         ░███    ░███   ██████    ░███ ░░░   ██████   ░███    ░███  ██████   ██████  ░███ █████
+         ░██████████   ░░░░░███  ███████    ░░░░░███  ░██████████  ███░░███ ███░░███ ░███░░███ 
+         ░███░░░░░███   ███████ ░░░███░      ███████  ░███░░░░░███░███ ░███░███ ░███ ░██████░  
+         ░███    ░███  ███░░███   ░███      ███░░███  ░███    ░███░███ ░███░███ ░███ ░███░░███ 
+         █████   █████░░████████  █████    ░░████████ ███████████ ░░██████ ░░██████  ████ █████
+         ░░░░░   ░░░░░  ░░░░░░░░  ░░░░░      ░░░░░░░░ ░░░░░░░░░░░   ░░░░░░   ░░░░░░  ░░░░ ░░░░░
+        \n
+                                    ❖ CONSULTAR POST POR PERFIL ❖\n`)
+
+        let user: string = input("      User: ")
+                            
+        let perfil: Perfil | null = this._redeSocial.consultarPerfil(undefined, user)
+
+        let postagem: Postagem[] = this._redeSocial.consultarPostagem(undefined, undefined, undefined, perfil)
+
+        let postagens: Postagem[] = postagem
+        for (let i: number = 0; i < postagens.length; i++) {
+            let post: Postagem = postagens[i]
+            console.log(`
+            \x1b[1m@${post.perfil.user}\x1b[0m\n
+            ${post.data.toLocaleString('pt-BR', opcoesDeFormato)}\n
+            ${this.quebrarTextoEmLinhas(post.texto, 50)}`)
+            
+            let hashtags: string = ""
+            if (post instanceof PostagemAvancada) {
+                for (let hash of post.hashtags) {
+                    hashtags += "#" + hash + " "
+                }
+                console.log(`\n            \x1b[94m${hashtags}\x1b[0m`)
+                this._redeSocial.decrementarVisualizacoes(post)
+            }
+
+            console.log(`
+            ▲ ${post.curtidas}    ▼ ${post.descurtidas}\n`)
+        }  
+
+        input("\nPressione Enter para retornar ao menu...")
+        this.menu()
+    }
+    
+    public consultarPostId(): void {
+        console.clear()
+        console.log(`
+        ███████████                ██████            ███████████                    █████     
+        ░░███░░░░░███              ███░░███          ░░███░░░░░███                  ░░███      
+         ░███    ░███   ██████    ░███ ░░░   ██████   ░███    ░███  ██████   ██████  ░███ █████
+         ░██████████   ░░░░░███  ███████    ░░░░░███  ░██████████  ███░░███ ███░░███ ░███░░███ 
+         ░███░░░░░███   ███████ ░░░███░      ███████  ░███░░░░░███░███ ░███░███ ░███ ░██████░  
+         ░███    ░███  ███░░███   ░███      ███░░███  ░███    ░███░███ ░███░███ ░███ ░███░░███ 
+         █████   █████░░████████  █████    ░░████████ ███████████ ░░██████ ░░██████  ████ █████
+         ░░░░░   ░░░░░  ░░░░░░░░  ░░░░░      ░░░░░░░░ ░░░░░░░░░░░   ░░░░░░   ░░░░░░  ░░░░ ░░░░░
+        \n
+                                    ❖ CONSULTAR POST POR ID ❖\n`)
+
+        let id: number = +input("      Id: ")
+
+        let postagem: Postagem[] = this._redeSocial.consultarPostagem(id)
+
+        let post: Postagem = postagem[0]
+            console.log(`
+            \x1b[1m@${post.perfil.user}\x1b[0m\n
+            ${post.data.toLocaleString('pt-BR', opcoesDeFormato)}\n
+            ${this.quebrarTextoEmLinhas(post.texto, 50)}`)
+            
+            let hashtags: string = ""
+            if (post instanceof PostagemAvancada) {
+                for (let hash of post.hashtags) {
+                    hashtags += "#" + hash + " "
+                }
+                console.log(`\n            \x1b[94m${hashtags}\x1b[0m`)
+                this._redeSocial.decrementarVisualizacoes(post)
+            }
+
+            console.log(`
+            ▲ ${post.curtidas}    ▼ ${post.descurtidas}\n`)
+
+        input("\nPressione Enter para retornar ao menu...")
+        this.menu()
     }
 
     public criarPostagem(): void {
@@ -74,9 +215,41 @@ class App {
          █████   █████░░████████  █████    ░░████████ ███████████ ░░██████ ░░██████  ████ █████
          ░░░░░   ░░░░░  ░░░░░░░░  ░░░░░      ░░░░░░░░ ░░░░░░░░░░░   ░░░░░░   ░░░░░░  ░░░░ ░░░░░
         \n
-                                        ❖ CRIAR POSTAGEM ❖
-                                            
-        ──────────────────────────────────────────────────────────────────────────────────────\n`)
+                                        ❖ CRIAR POSTAGEM ❖\n`)
+
+        let userPerfil: string = input("User: ")
+        let perfil: Perfil | null = this._redeSocial.consultarPerfil(undefined, userPerfil)
+        let texto: string = input("Conteudo: ")
+
+        let escolha: string = input("Adicionar hashtags (s/n): ")
+        let id = idPostGlobal
+        idPostGlobal++
+        
+        if (perfil) {
+            if (escolha == 's' || escolha == 'S') {
+                let postAvan: PostagemAvancada = new PostagemAvancada(id, texto, 0, 0, new Date(), perfil, 100)
+                this._redeSocial.incluirPostagem(postAvan)
+                let hashtags: string = input("Digite a(s) hahstags que deseja adicionar (separadas por espaco: ")
+                let arrayHashtags: string[] = hashtags.split(" ")
+                for (let hash of arrayHashtags) {
+                    postAvan.adicionarHashtags(hash)
+                }
+            } else {
+                let post: Postagem = new Postagem(id, texto, 0, 0, new Date(), perfil)
+                this._redeSocial.incluirPostagem(post)
+            }
+
+            if (this._redeSocial.consultarPostagem(id)) {
+                console.log("\nPostagem criada com sucesso!")
+            } else {
+                console.log("\nERRO! Falha na criacao.")
+            }
+        } else {
+            console.log("\nERRO! Perfil inexistente, ou falha na criacao.")
+        }
+
+        input("\nPressione Enter para retornar ao menu...")
+        this.menu()
     }
 
     public cadastrarPerfil(): void {
@@ -91,21 +264,20 @@ class App {
          █████   █████░░████████  █████    ░░████████ ███████████ ░░██████ ░░██████  ████ █████
          ░░░░░   ░░░░░  ░░░░░░░░  ░░░░░      ░░░░░░░░ ░░░░░░░░░░░   ░░░░░░   ░░░░░░  ░░░░ ░░░░░
         \n
-                                        ❖ CADASTRAR PERFIL ❖
-                                            
-        ──────────────────────────────────────────────────────────────────────────────────────\n`)
+                                        ❖ CADASTRAR PERFIL ❖\n`)
 
         let user: string = input("      User: ")
         let email: string = input("      E-mail: ")
         let id = idGlobal
         idGlobal++
-        if (redeSocial.incluirPerfil(new Perfil(id, user, email))) {
-            console.log("Perfil cadastrado com sucesso!")
+        if (this._redeSocial.incluirPerfil(new Perfil(id, user, email))) {
+            console.log("\nPerfil cadastrado com sucesso!")
         } else {
-            console.log("ERRO! Perfil existente, ou falha no cadastro.")
+            console.log("\nERRO! Perfil existente, ou falha no cadastro.")
         }
 
         input("\nPressione Enter para retornar ao menu...")
+        this.menu()
     }
 
     public consultarPerfil(): void {
@@ -120,16 +292,14 @@ class App {
          █████   █████░░████████  █████    ░░████████ ███████████ ░░██████ ░░██████  ████ █████
          ░░░░░   ░░░░░  ░░░░░░░░  ░░░░░      ░░░░░░░░ ░░░░░░░░░░░   ░░░░░░   ░░░░░░  ░░░░ ░░░░░
         \n
-                                        ❖ CONSULTAR PERFIL ❖
-                                            
-        ──────────────────────────────────────────────────────────────────────────────────────\n`)
+                                        ❖ CONSULTAR PERFIL ❖\n`)
 
         console.log("       Preencha os que quiser.\n")
         let id: number = +input("      Id: ")
         let user: string = input("      User: ")
         let email: string = input("      E-mail: ")
 
-        let perfil: Perfil | null = redeSocial.consultarPerfil(id, user, email)
+        let perfil: Perfil | null = this._redeSocial.consultarPerfil(id, user, email)
 
         if (perfil) {
             console.log(`
@@ -144,6 +314,7 @@ class App {
         }
 
         input("\nPressione Enter para retornar ao menu...")
+        this.menu()
     }
 
     public feed(): void {
@@ -158,9 +329,7 @@ class App {
          █████   █████░░████████  █████    ░░████████ ███████████ ░░██████ ░░██████  ████ █████
          ░░░░░   ░░░░░  ░░░░░░░░  ░░░░░      ░░░░░░░░ ░░░░░░░░░░░   ░░░░░░   ░░░░░░  ░░░░ ░░░░░
         \n
-                                            ❖ FEED ❖
-                                            
-        ──────────────────────────────────────────────────────────────────────────────────────`)
+                                            ❖ FEED ❖\n`)
 
         let postagens: Postagem[] = this._redeSocial.repoPostagens.postagens
         for (let i: number = 0; i < postagens.length; i++) {
@@ -175,16 +344,16 @@ class App {
                 for (let hash of post.hashtags) {
                     hashtags += "#" + hash + " "
                 }
-                console.log(`\n           \x1b[94m${hashtags}\x1b[0m`)
+                console.log(`\n            \x1b[94m${hashtags}\x1b[0m`)
                 this._redeSocial.decrementarVisualizacoes(post)
             }
 
             console.log(`
-            ▲ ${post.curtidas}    ▼ ${post.descurtidas}\n
-        ──────────────────────────────────────────────────────────────────────────────────────`)
+            ▲ ${post.curtidas}    ▼ ${post.descurtidas}\n`)
         }       
 
-        input("\nPressione Enter para retornar ao menu...")
+        input("\n       Pressione Enter para retornar ao menu...")
+        this.menu()
     }
 
     public quebrarTextoEmLinhas(texto: string, maxCaracteresPorLinha: number): string {
@@ -208,10 +377,4 @@ class App {
 }
 let redeSocial: RedeSocial = new RedeSocial(new RepositorioDePerfis, new RepositorioDePostagens)
 let app: App = new App(redeSocial)
-let novoPerfil: Perfil = new Perfil(1, 'abc', 'amongus@gmail.com')
-let novaPostagem: Postagem = new Postagem(1, 'Rafael feio', 69, 0, new Date(), novoPerfil)
-let novaPostagem2: PostagemAvancada = new PostagemAvancada(2, "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", 5, 10, new Date(), novoPerfil, 100)
-redeSocial.incluirPostagem(novaPostagem)
-redeSocial.incluirPostagem(novaPostagem2)
-novaPostagem2.adicionarHashtags("lorem", "ipsum", "adveniat")
 app.menu()
