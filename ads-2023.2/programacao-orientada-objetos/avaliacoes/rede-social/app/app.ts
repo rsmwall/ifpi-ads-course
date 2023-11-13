@@ -58,11 +58,11 @@ class App {
                 this.cadastrarPerfil()
                 break
             case 0:
+                console.log("            Aplicação encerrada")
                 break
             default:
                 this.acessarApp()
             }  
-        console.log("            Aplicação encerrada")
     }
 
     public login(): void {
