@@ -62,6 +62,7 @@ class App {
                 break
             default:
                 this.acessarApp()
+                break
             }  
     }
 
@@ -72,7 +73,7 @@ class App {
         let user: string = input("          User: ")
         let senha: string = input("          Senha: ")
 
-        let perfil: Perfil | null = this._redeSocial.consultarPerfil(undefined, user, undefined, senha)
+        let perfil: Perfil | null = this._redeSocial.logar(user, senha)
 
         if (perfil) {
             perfilLogado = perfil
@@ -99,9 +100,9 @@ class App {
         
         - Para pesquisar perfis, utilize (@) antes do usuario
         - Para pesquisar postagens por hahstags, utilize (#) antes da hahstag
-        - Para pesquisar postagens por conteudo, apenas digite o texto`)
+        - Para pesquisar postagens por conteudo, apenas digite o texto\n`)
 
-        let busca: string = input("/n          | ")
+        let busca: string = input("          | ")
         if (/^@/.test(busca)) {
             let user: string = busca.substring(1)
             let perfil: Perfil | null = this._redeSocial.consultarPerfil(undefined, user)
@@ -202,6 +203,7 @@ class App {
                     break
                 case 13:
                     this.consultarPerfil()
+                    break
                 case 14:
                     this.consultarPostId()
                     break
@@ -219,6 +221,7 @@ class App {
                     break
                 default:
                     this.menu()
+                    break
             }
     }
 
@@ -301,7 +304,8 @@ class App {
 
         let postagem: Postagem[] = this._redeSocial.consultarPostagem(id)
 
-        let post: Postagem = postagem[0]
+        if (postagem.length < 0) {
+            let post: Postagem = postagem[0]
             console.log(`
             \x1b[1m@${post.perfil.user}\x1b[0m\n
             ${post.data.toLocaleString('pt-BR', opcoesDeFormato)}\n
@@ -318,6 +322,9 @@ class App {
 
             console.log(`
             ▲ ${post.curtidas}    ▼ ${post.descurtidas}\n`)
+        } else {
+            console.log("Postagem inexistente.")
+        }
 
         input("\nPressione Enter para retornar ao menu...")
         this.menu()
@@ -450,25 +457,29 @@ class App {
 
         let postagem: Postagem[] = this._redeSocial.consultarPostagem(id)
 
-        let post: Postagem = postagem[0]
-        this._redeSocial.curtir(post.id)
-        console.log('Você curtiu o seguinte post:')
-            console.log(`
-            \x1b[1m@${post.perfil.user}\x1b[0m\n
-            ${post.data.toLocaleString('pt-BR', opcoesDeFormato)}\n
-            ${this.quebrarTextoEmLinhas(post.texto, 50)}`)
-            
-            let hashtags: string = ""
-            if (post instanceof PostagemAvancada) {
-                for (let hash of post.hashtags) {
-                    hashtags += "#" + hash + " "
+        if (postagem) {
+            let post: Postagem = postagem[0]
+            this._redeSocial.curtir(post.id)
+            console.log('Você curtiu o seguinte post:')
+                console.log(`
+                \x1b[1m@${post.perfil.user}\x1b[0m\n
+                ${post.data.toLocaleString('pt-BR', opcoesDeFormato)}\n
+                ${this.quebrarTextoEmLinhas(post.texto, 50)}`)
+                
+                let hashtags: string = ""
+                if (post instanceof PostagemAvancada) {
+                    for (let hash of post.hashtags) {
+                        hashtags += "#" + hash + " "
+                    }
+                    console.log(`\n            \x1b[94m${hashtags}\x1b[0m`)
+                    this._redeSocial.decrementarVisualizacoes(post)
                 }
-                console.log(`\n            \x1b[94m${hashtags}\x1b[0m`)
-                this._redeSocial.decrementarVisualizacoes(post)
-            }
 
-            console.log(`
-            ▲ ${post.curtidas}    ▼ ${post.descurtidas}\n`)
+                console.log(`
+                ▲ ${post.curtidas}    ▼ ${post.descurtidas}\n`)
+        }  else {
+            console.log("Postagem inexistente.")
+        }
 
         input("\nPressione Enter para retornar ao menu...")
         this.menu()
@@ -482,25 +493,29 @@ class App {
 
         let postagem: Postagem[] = this._redeSocial.consultarPostagem(id)
 
-        let post: Postagem = postagem[0]
-        this._redeSocial.descurtir(post.id)
-        console.log('Você descurtiu o seguinte post:')
-            console.log(`
-            \x1b[1m@${post.perfil.user}\x1b[0m\n
-            ${post.data.toLocaleString('pt-BR', opcoesDeFormato)}\n
-            ${this.quebrarTextoEmLinhas(post.texto, 50)}`)
-            
-            let hashtags: string = ""
-            if (post instanceof PostagemAvancada) {
-                for (let hash of post.hashtags) {
-                    hashtags += "#" + hash + " "
+        if (postagem) {
+            let post: Postagem = postagem[0]
+            this._redeSocial.descurtir(post.id)
+            console.log('Você descurtiu o seguinte post:')
+                console.log(`
+                \x1b[1m@${post.perfil.user}\x1b[0m\n
+                ${post.data.toLocaleString('pt-BR', opcoesDeFormato)}\n
+                ${this.quebrarTextoEmLinhas(post.texto, 50)}`)
+                
+                let hashtags: string = ""
+                if (post instanceof PostagemAvancada) {
+                    for (let hash of post.hashtags) {
+                        hashtags += "#" + hash + " "
+                    }
+                    console.log(`\n            \x1b[94m${hashtags}\x1b[0m`)
+                    this._redeSocial.decrementarVisualizacoes(post)
                 }
-                console.log(`\n            \x1b[94m${hashtags}\x1b[0m`)
-                this._redeSocial.decrementarVisualizacoes(post)
-            }
 
-            console.log(`
-            ▲ ${post.curtidas}    ▼ ${post.descurtidas}\n`)
+                console.log(`
+                ▲ ${post.curtidas}    ▼ ${post.descurtidas}\n`)
+        } else {
+            console.log("Postagem inexistente.")
+        }
 
         input("\nPressione Enter para retornar ao menu...")
         this.menu()
@@ -642,7 +657,7 @@ class App {
         this.titulo()
         console.log(`
         ❖ SEGUIDORES ❖\n`)
-        for (let seguido of perfilLogado.seguidos) {
+        for (let seguido of perfilLogado.seguidores) {
             console.log(`
             Seguidor: ${seguido.user}
                 `)

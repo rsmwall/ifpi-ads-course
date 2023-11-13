@@ -32,6 +32,10 @@ export class RedeSocial {
         return this._repoPerfis.consultar(id, user, email, senha)
     }
 
+    public logar(user: string, senha: string): Perfil | null {
+        return this._repoPerfis.logar(user, senha)
+    }
+
     public incluirPostagem(postagem: Postagem): boolean {
         let existe: boolean = false
         for (let i: number = 0; i < this._repoPostagens.postagens.length; i++) {

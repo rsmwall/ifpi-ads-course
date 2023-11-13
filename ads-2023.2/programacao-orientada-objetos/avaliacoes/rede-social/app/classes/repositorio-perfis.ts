@@ -17,6 +17,14 @@ export class RepositorioDePerfis {
 
         return perfilEncontrado || null
     }
+
+    public logar(user: string, senha: string): Perfil | null {
+        const perfilLogado = this._perfis.find((perfil) => {
+            return (perfil.user == user) && (perfil.senha == senha)
+        })
+
+        return perfilLogado || null
+    }
     
     public get perfis() : Perfil[] {
         return this._perfis
