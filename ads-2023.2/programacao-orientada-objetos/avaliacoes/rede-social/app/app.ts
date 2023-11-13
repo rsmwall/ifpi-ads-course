@@ -215,11 +215,11 @@ class App {
                     this.descurtir()
                     break
                 case 0:
+                    this.acessarApp()
                     break
                 default:
                     this.menu()
-            }  
-        console.log("Aplicação encerrada")
+            }
     }
 
     public consultarHashtag(hash: string): void {
