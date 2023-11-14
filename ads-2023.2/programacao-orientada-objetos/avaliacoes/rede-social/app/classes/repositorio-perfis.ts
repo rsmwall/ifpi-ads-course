@@ -30,4 +30,7 @@ export class RepositorioDePerfis {
         return this._perfis
     }
     
+    public set perfis(perfis: Perfil[]) {
+        this._perfis = perfis
+    }
 }

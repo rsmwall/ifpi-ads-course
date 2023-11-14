@@ -36,5 +36,9 @@ export class PostagemAvancada extends Postagem{
     public get visualizacoesRestantes() : number {
         return this._visualizacoesRestantes
     }
+
+    public set hashtags(hashtags: string[]) {
+        hashtags = hashtags
+    }
     
 }

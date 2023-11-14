@@ -4,6 +4,7 @@ import { PostagemAvancada } from "./postagem-avancada"
 
 export class RepositorioDePostagens {
     private _postagens: Postagem[] = []
+    private _hashtags: string[] = []
 
     public incluir(postagem: Postagem): void {
         this._postagens.push(postagem)
@@ -32,6 +33,18 @@ export class RepositorioDePostagens {
     
     public get postagens() : Postagem[] {
         return this._postagens
+    }
+
+    public set postagens(postagens: Postagem[]) {
+        this._postagens = postagens
+    }
+
+    public get hashtags() : string[] {
+        return this._hashtags
+    }
+
+    public set hashtags(hashtags: string[]) {
+        this._hashtags = hashtags
     }
     
 }

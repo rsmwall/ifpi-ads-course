@@ -1,4 +1,4 @@
-import { clear } from "console"
+import { clear, log } from "console"
 import { Perfil } from "./classes/perfil"
 import { Postagem } from "./classes/postagem"
 import { PostagemAvancada } from "./classes/postagem-avancada"
@@ -6,6 +6,8 @@ import { RedeSocial } from "./classes/rede-social"
 import { RepositorioDePerfis } from "./classes/repositorio-perfis"
 import { RepositorioDePostagens } from "./classes/repositorio-postagens"
 import prompt from 'prompt-sync'
+
+import * as fs from 'fs-extra'
 
 let input = prompt()
 let idGlobal: number = 1
@@ -39,6 +41,7 @@ class App {
     }
 
     public acessarApp(): void {
+        //carregar()
         let opcao: number = 0
         this.titulo()
         console.log(`
@@ -58,7 +61,7 @@ class App {
                 this.cadastrarPerfil()
                 break
             case 0:
-                console.log("            Aplicação encerrada")
+                //salvar()
                 break
             default:
                 this.acessarApp()
@@ -99,8 +102,7 @@ class App {
         Use os atalhos para busca:
         
         - Para pesquisar perfis, utilize (@) antes do usuario
-        - Para pesquisar postagens por hahstags, utilize (#) antes da hahstag
-        - Para pesquisar postagens por conteudo, apenas digite o texto\n`)
+        - Para pesquisar postagens por hahstags, utilize (#) antes da hahstag\n`)
 
         let busca: string = input("          | ")
         if (/^@/.test(busca)) {
@@ -141,23 +143,25 @@ class App {
             02. Consultar
             03. Criar Postagem
             04. Exibir Perfis Populares
+            05. Exibir Posts Populares
 
             ❖ PERFIL ❖\n
-            05. Bloquear um Perfil
-            06. Exibir Perfis Bloqueados
-            07. Desbloquear um Perfil
-            08. Exibir os Perfis Mais Ativos
-            09. Seguir um Perfil
-            10. Exibir Seguidores
-            11. Exibir Perfis que você Segue
-            12: Deixar de Seguir um Perfil
+            06. Bloquear um Perfil
+            07. Exibir Perfis Bloqueados
+            08. Desbloquear um Perfil
+            09. Exibir os Perfis Mais Ativos
+            10. Seguir um Perfil
+            11. Exibir Seguidores
+            12. Exibir Perfis que você Segue
+            13: Deixar de Seguir um Perfil
 
             ❖ RECURSOS SOLICITADOS ❖\n
-            13. Consultar Perfil
-            14. Consultar Postagem (ID)
-            15. Consultar Postagens (Perfil)
-            16. Curtir
-            17. Descurtir
+            14. Consultar Perfil
+            15. Consultar Postagem (ID)
+            16. Consultar Postagens (Perfil)
+            17. Curtir
+            18. Descurtir
+            19. Exibir Hashtags Populares
 
             ❖ AVANCADO ❖\n
             0. Sair\n`)
@@ -178,43 +182,49 @@ class App {
                     this.exibirPerfisPopulares()
                     break
                 case 5:
-                    this.bloquearPerfil()
+                    this.exibirPostsPopulares()
                     break
                 case 6:
-                    this.exibirBloqueados()
+                    this.bloquearPerfil()
                     break
                 case 7:
-                    this.desbloquearPerfil()
+                    this.exibirBloqueados()
                     break
                 case 8:
-                    this.exibirPerfisAtivos()
+                    this.desbloquearPerfil()
                     break
                 case 9:
-                    this.seguirPerfil()
+                    this.exibirPerfisAtivos()
                     break
                 case 10:
-                    this.exibirSeguidores()
+                    this.seguirPerfil()
                     break
                 case 11:
-                    this.exibirSeguindo()
+                    this.exibirSeguidores()
                     break
                 case 12:
-                    this.desseguirPerfil()
+                    this.exibirSeguindo()
                     break
                 case 13:
-                    this.consultarPerfil()
+                    this.desseguirPerfil()
                     break
                 case 14:
-                    this.consultarPostId()
+                    this.consultarPerfil()
                     break
                 case 15:
-                    this.consultarPorPerfil()
+                    this.consultarPostId()
                     break
                 case 16:
-                    this.curtir()
+                    this.consultarPorPerfil()
                     break
                 case 17:
+                    this.curtir()
+                    break
+                case 18:
                     this.descurtir()
+                    break
+                case 19:
+                    this.exibirHashtagsPopulares()
                     break
                 case 0:
                     this.acessarApp()
@@ -223,6 +233,37 @@ class App {
                     this.menu()
                     break
             }
+    }
+
+    public exibirPostsPopulares(): void {
+        this.titulo()
+        console.log(`
+        ❖ POSTS POPULARES ❖\n`)
+
+        let postsPopulares: Postagem[] = redeSocial.exibirPostsPopulares(redeSocial.repoPostagens)
+
+        for (let post of postsPopulares) {
+            console.log(`
+            \x1b[1m@${post.perfil.user}\x1b[0m\n
+            ${post.data.toLocaleString('pt-BR', opcoesDeFormato)}\n
+            ${this.quebrarTextoEmLinhas(post.texto, 50)}`)
+            
+            let hashtags: string = ""
+            if (post instanceof PostagemAvancada) {
+                for (let hash of post.hashtags) {
+                    hashtags += "#" + hash + " "
+                }
+                console.log(`\n            \x1b[94m${hashtags}\x1b[0m`)
+                this._redeSocial.decrementarVisualizacoes(post)
+            }
+
+            console.log(`
+            ▲ ${post.curtidas}    ▼ ${post.descurtidas}\n`)
+        }
+
+        input("\nPressione Enter para retornar ao menu...")
+        this.menu()
+
     }
 
     public consultarHashtag(hash: string): void {
@@ -304,7 +345,7 @@ class App {
 
         let postagem: Postagem[] = this._redeSocial.consultarPostagem(id)
 
-        if (postagem.length < 0) {
+        if (postagem[0] != undefined) {
             let post: Postagem = postagem[0]
             console.log(`
             \x1b[1m@${post.perfil.user}\x1b[0m\n
@@ -457,7 +498,7 @@ class App {
 
         let postagem: Postagem[] = this._redeSocial.consultarPostagem(id)
 
-        if (postagem) {
+        if (postagem[0] != null) {
             let post: Postagem = postagem[0]
             this._redeSocial.curtir(post.id)
             console.log('Você curtiu o seguinte post:')
@@ -493,7 +534,7 @@ class App {
 
         let postagem: Postagem[] = this._redeSocial.consultarPostagem(id)
 
-        if (postagem) {
+        if (postagem[0] != undefined) {
             let post: Postagem = postagem[0]
             this._redeSocial.descurtir(post.id)
             console.log('Você descurtiu o seguinte post:')
@@ -813,6 +854,61 @@ class App {
 
         return linhas.join('\n            ');
     }
+
+    public retornarHashtags(): string[] {
+        let postagens: Postagem[] = this._redeSocial.repoPostagens.postagens
+        let hashtags: string = ""
+        for (let i: number = 0; i < postagens.length; i++) {
+            let post: Postagem = postagens[i]
+            if (post instanceof PostagemAvancada) {
+                for (let hash of post.hashtags) {
+                    hashtags += hash + " "
+                }
+            }
+        }
+        let hashtagsArray: string[] = hashtags.split(" ")
+        return hashtagsArray
+    }
+
+    get redeSocial(): RedeSocial {
+        return this._redeSocial
+    }
+
+    public exibirHashtagsPopulares(): void {
+        this.titulo()
+        console.log(`
+        ❖ HASHTAGS POPULARES ❖\n`)
+        let hashtags: string[] = this.retornarHashtags()
+        let hashtagPopular: string = ""
+        let hashtagsPopulares: string[] = []
+        let contador: number = 0
+
+        console.log(hashtags)
+        
+
+        for (let hash of hashtags) {
+            hashtagPopular = hash
+            for (let hashtag of hashtags) {
+                if (hashtag == hashtagPopular && hashtag != " ") {
+                    contador++
+                }
+            } 
+
+            if (contador >= 5) {
+                if (!hashtagsPopulares.includes(hashtagPopular)) {
+                    hashtagsPopulares.push(hashtagPopular)
+                }
+                contador = 0
+            }
+        }
+
+        for (let hash of hashtagsPopulares) {
+            console.log(`#${hash}`)
+        }
+
+        input("\nPressione Enter para retornar ao menu...")
+        this.menu()
+    }
 }
 let redeSocial: RedeSocial = new RedeSocial(new RepositorioDePerfis, new RepositorioDePostagens)
 let app: App = new App(redeSocial)
@@ -821,4 +917,87 @@ if (isLogado) {
     app.menu()
 } else {
     app.acessarApp()
+}
+
+// // Armazenamento
+function salvarPerfisTxt(caminhoArquivo: string, perfis: Perfil[]): void {
+    const dadosPerfisTxt = perfis.map(perfil => {
+        return `${perfil['_id']},${perfil['_user']},${perfil['_email']},${perfil['_senha']}`
+    }).join('\n')
+
+    salvarDadosTxt(caminhoArquivo, dadosPerfisTxt)
+}
+
+function salvarPostagensTxt(caminhoArquivo: string, postagens: (Postagem | PostagemAvancada)[]): void {
+    const dadosPostagensTxt = postagens.map(postagem => {
+        if ('_hashtags' in postagem) {
+            return `${postagem['_id']},${postagem['_texto']},${postagem['_curtidas']},${postagem['_descurtidas']},${postagem['_data']},${postagem['_perfil']['_user']},${(postagem as PostagemAvancada)['_hashtags'].join(',')},${(postagem as PostagemAvancada)['_visualizacoesRestantes']},PostagemAvancada`;
+        } else {
+            return `${postagem['_id']},${postagem['_texto']},${postagem['_curtidas']},${postagem['_descurtidas']},${postagem['_data']},${postagem['_perfil']['_user']},Postagem`;
+        }
+    }).join('\n');
+
+    salvarDadosTxt(caminhoArquivo, dadosPostagensTxt);
+}
+
+function salvarDadosTxt(caminhoArquivo: string, dados: string): void {
+    try {
+        fs.writeFileSync(caminhoArquivo, dados, 'utf-8')
+    } catch (erro) {
+    }
+}
+
+function salvar(): void {
+    salvarPerfisTxt('/home/rsmwall/Github/ifpi-ads-course/ads-2023.2/programacao-orientada-objetos/avaliacoes/rede-social/app/docs/perfis.txt', app.redeSocial.repoPerfis.perfis)
+    salvarPostagensTxt('/home/rsmwall/Github/ifpi-ads-course/ads-2023.2/programacao-orientada-objetos/avaliacoes/rede-social/app/docs/postagens.txt', app.redeSocial.repoPostagens.postagens)
+}
+
+function lerDadosTxt(caminhoArquivo: string): string[] {
+    try {
+        const dados = fs.readFileSync(caminhoArquivo, 'utf-8')
+        return dados.split('\n').map(line => line.trim()).filter(Boolean)
+    } catch (erro) {
+        return []
+    }
+}
+
+function carregarPerfis(caminhoArquivo: string): Perfil[] {
+    const dadosPerfis = lerDadosTxt(caminhoArquivo)
+    const perfis: Perfil[] = []
+
+    for (const linha of dadosPerfis) {
+        const [id, user, email, senha] = linha.split(',')
+        const perfil = new Perfil(parseInt(id), user, email, senha)
+        app.redeSocial.incluirPerfil(perfil)
+    }
+
+    return perfis
+}
+
+function carregarPostagens(caminhoArquivo: string): (Postagem | PostagemAvancada)[] {
+    const dadosPostagens = lerDadosTxt(caminhoArquivo)
+    const postagens: (Postagem | PostagemAvancada)[] = []
+
+    for (const linha of dadosPostagens) {
+        const [id, texto, curtidas, descurtidas, data, perfilUser, ...resto] = linha.split(',')
+        const perfil = new Perfil(0, perfilUser, '', '')
+        const postagem = new Postagem(parseInt(id), texto, parseInt(curtidas), parseInt(descurtidas), new Date(data), perfil)
+
+        if (resto.length > 0) {
+            const hashtags = resto.slice(0, -1)
+            const visualizacoesRestantes = parseInt(resto[resto.length - 1])
+            const postagemAvancada = new PostagemAvancada(postagem.id, postagem.texto, postagem.curtidas, postagem.descurtidas, postagem.data, postagem.perfil, visualizacoesRestantes)
+            postagemAvancada.hashtags = hashtags
+            app.redeSocial.incluirPostagem(postagemAvancada)
+        } else {
+            app.redeSocial.incluirPostagem(postagem)
+        }
+    }
+
+    return postagens
+}
+
+function carregar(): void {
+    carregarPerfis('/home/rsmwall/Github/ifpi-ads-course/ads-2023.2/programacao-orientada-objetos/avaliacoes/rede-social/app/docs/perfis.txt')
+    carregarPostagens('/home/rsmwall/Github/ifpi-ads-course/ads-2023.2/programacao-orientada-objetos/avaliacoes/rede-social/app/docs/postagens.txt')
 }
