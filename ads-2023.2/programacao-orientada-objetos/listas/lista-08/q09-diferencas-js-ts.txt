@@ -1,0 +1,28 @@
+9) Existem diferenças significativas no tratamento de exceções entre TypeScript e
+JavaScript?
+
+    - Tipagem estática: 
+    Uma das principais diferenças é que o TypeScript é fortemente tipado, o que significa que você pode definir tipos para variáveis, parâmetros 
+    e retornos de função. Isso pode ajudar a capturar erros de tipo em tempo de compilação que, de outra forma, seriam potenciais causadores de 
+    exceções em tempo de execução.
+
+    - Melhor suporte para erros de tipagem: 
+    Em TypeScript, o compilador pode capturar certos tipos de erros em tempo de compilação, como a tentativa de chamar métodos ou acessar 
+    propriedades em variáveis que não possuem esses métodos ou propriedades. Isso pode reduzir a ocorrência de exceções relacionadas a erros de 
+    tipo em comparação com JavaScript.
+
+    - Controle de fluxo de tipos: 
+    TypeScript permite utilizar a estrutura de controle de fluxo de tipos (Type Guarding) para verificar e garantir tipos específicos em tempo 
+    de compilação. Isso pode ajudar a reduzir erros de tipos que, em JavaScript puro, poderiam resultar em exceções.
+
+    - Documentação de tipos de exceção: 
+    O TypeScript permite documentar os tipos de exceção que uma função pode lançar usando anotações de tipo, ajudando a comunicar aos 
+    desenvolvedores quais exceções podem ser esperadas.
+
+    - Construções mais avançadas de tipos: 
+    O TypeScript oferece recursos mais avançados para trabalhar com tipos, como tipos condicionais e tipos de união, que podem ser usados de 
+    forma mais sofisticada no tratamento de exceções.
+
+    - Ferramentas de desenvolvimento: 
+    O TypeScript oferece uma experiência de desenvolvimento mais avançada com ferramentas como o IntelliSense, que pode ajudar a detectar 
+    possíveis exceções durante a escrita do código.

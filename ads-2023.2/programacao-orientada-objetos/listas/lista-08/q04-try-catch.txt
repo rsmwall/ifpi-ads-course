@@ -1,0 +1,11 @@
+4) Qual é a função do bloco try-catch no tratamento de exceções em TypeScript?
+
+    - Sua função principal é permitir que o código capture e trate exceções que podem ocorrer durante a execução de um bloco de código específico.
+
+        * try: 
+        O bloco try envolve o código no qual você suspeita que pode ocorrer uma exceção. É aqui que você coloca o código que pode gerar um erro ou exceção.
+
+        * catch: 
+        O bloco catch é usado para capturar e lidar com a exceção que foi lançada no bloco try. Se uma exceção for lançada dentro do bloco try, o 
+        controle do programa passa diretamente para o bloco catch, onde o desenvolvedor pode especificar como lidar com a exceção capturada. É comum incluir 
+        lógica para tratar a exceção, como registrar o erro, fornecer feedback ao usuário ou tomar alguma ação corretiva.

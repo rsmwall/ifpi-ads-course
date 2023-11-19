@@ -1,0 +1,27 @@
+8) Como o tratamento de exceções em TypeScript ajuda a melhorar a robustez e a
+segurança de uma aplicação?
+
+    - Resiliência a erros inesperados: 
+    As exceções capturam e lidam com erros inesperados durante a execução do código. Isso ajuda a prevenir 
+    falhas não controladas que poderiam parar a execução do programa.
+
+    - Manutenção do fluxo de controle: 
+    O tratamento de exceções permite controlar e manter o fluxo de execução do programa, mesmo quando 
+    ocorrem erros. Isso ajuda a evitar que a aplicação pare completamente ou entre em estados incoerentes.
+
+    - Detecção e registro de problemas: 
+    As exceções podem ser capturadas, registradas e até mesmo tratadas de maneira apropriada, fornecendo 
+    informações detalhadas sobre o erro que ocorreu. Isso facilita a identificação e a resolução de problemas durante o desenvolvimento e na produção.
+
+    - Prevenção de vazamento de recursos: 
+    Em situações onde recursos externos, como conexões de banco de dados, arquivos ou sockets, são 
+    utilizados, o tratamento de exceções no bloco finally pode garantir que esses recursos sejam fechados corretamente, mesmo em caso de 
+    exceções, prevenindo vazamento de recursos.
+
+    - Feedback ao usuário: 
+    Lidar com exceções adequadamente permite que a aplicação forneça feedback claro e informativo ao usuário sobre 
+    problemas que possam surgir durante o uso, melhorando a experiência do usuário e a percepção da qualidade da aplicação.
+
+    - Robustez e estabilidade: 
+    Ao capturar e tratar exceções de forma apropriada, a aplicação se torna mais robusta e estável, reduzindo a 
+    probabilidade de falhas catastróficas e ajudando a manter um comportamento esperado em situações inesperadas.

@@ -1,0 +1,18 @@
+7) Qual é o papel do bloco finally no tratamento de exceções em TypeScript?
+
+    - O bloco finally no tratamento de exceções em TypeScript (e JavaScript) desempenha um papel crucial, oferecendo uma maneira de executar código, 
+    independentemente de ter ocorrido ou não uma exceção no bloco try.
+
+    Principais pontos sobre o bloco finally:
+
+        * Execução sempre garantida: 
+        O bloco finally é executado, não importa se uma exceção foi lançada ou não no bloco try. Mesmo que uma exceção seja 
+        lançada e capturada, o código dentro do bloco finally será executado após o try-catch.
+
+        * Limpeza de recursos: 
+        É comumente usado para ações que precisam ser executadas, como liberação de recursos, fechamento de conexões, manipulação 
+        de arquivos ou qualquer outra operação que deva ser garantida, independentemente de ocorrer uma exceção.
+        
+        * Uso com recursos externos: 
+        Em situações onde recursos externos estão sendo utilizados, como conexões com banco de dados, arquivos ou sockets de 
+        rede, o bloco finally é útil para garantir que esses recursos sejam fechados adequadamente, independentemente de ocorrerem exceções.

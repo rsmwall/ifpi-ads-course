@@ -1,0 +1,29 @@
+10) Como você pode testar e depurar eficientemente exceções em TypeScript?
+
+    - Testes unitários e funcionais: 
+    Utilize estruturas de teste como Jest, Mocha, Jasmine ou outras ferramentas para criar casos de teste que cubram cenários onde exceções 
+    podem ocorrer. Isso permite identificar e corrigir problemas antes que o código seja implantado.
+
+    - Assertions e testes de unidade: 
+    Use afirmações (assertions) para verificar se seu código se comporta conforme o esperado. Testes de unidade bem escritos podem ajudar a 
+    prevenir e identificar exceções, verificando o comportamento esperado em diferentes cenários.
+
+    - Ferramentas de Debugging: 
+    Use o depurador integrado ao seu ambiente de desenvolvimento (como o debugger do VSCode) para identificar e analisar exceções. Coloque 
+    pontos de interrupção (breakpoints) em áreas suspeitas do código para examinar variáveis, estado do programa e rastrear o fluxo de execução.
+
+    - Tipagem estática: 
+    Aproveite as vantagens da tipagem estática do TypeScript para capturar erros de tipo em tempo de compilação. Isso pode prevenir muitas 
+    exceções relacionadas a tipos de dados.
+
+    - Tratamento de exceções: 
+    Utilize blocos try-catch em torno de seções de código que possam gerar exceções. Certifique-se de que o código dentro do bloco catch lida 
+    adequadamente com a exceção, registrando-a ou fornecendo um comportamento alternativo.
+
+    - Logging e monitoramento: 
+    Implemente logs para registrar informações relevantes, como stack traces, mensagens de erro e contexto de exceções. Isso pode ajudar a 
+    identificar e corrigir problemas após a implantação.
+
+    - Testes de integração: 
+    Realize testes de integração para verificar a interação entre diferentes partes do sistema, verificando como o código se comporta em 
+    ambientes mais próximos do ambiente de produção.

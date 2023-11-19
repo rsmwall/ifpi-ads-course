@@ -1,0 +1,5 @@
+2) O que é uma exceção em programação e como ela se diferencia de um erro comum?
+
+    - A diferença principal entre uma exceção e um erro comum está na natureza do evento. Enquanto um erro comum pode ser uma falha de lógica no código 
+    (como uma variável malformada, um loop infinito, uma lógica incorreta), uma exceção geralmente está relacionada a circunstâncias inesperadas 
+    ou incontroláveis, como acesso a recursos indisponíveis, divisão por zero, tentativa de acesso a um elemento fora dos limites de um array, entre outros.

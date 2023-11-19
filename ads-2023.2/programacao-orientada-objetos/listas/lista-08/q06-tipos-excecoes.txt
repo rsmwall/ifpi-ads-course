@@ -1,0 +1,20 @@
+6) Quais são os tipos comuns de exceções que podem ser encontradas em
+aplicações TypeScript?
+
+    - TypeError: 
+    Normalmente ocorre quando se tenta acessar uma propriedade ou chamar um método de um objeto que é null ou undefined.
+
+    - ReferenceError: 
+    Surge quando uma variável ou função é usada, mas não foi declarada ou está fora de escopo.
+
+    - SyntaxError: 
+    Ocorre quando há erros de sintaxe no código, como falta de ponto e vírgula, parênteses desbalanceados, entre outros.
+
+    - RangeError: 
+    Acontece quando se tenta manipular um valor fora do intervalo permitido, como exceder o tamanho máximo de um array.
+
+    - EvalError: 
+    Pouco comum hoje em dia, ocorre quando há erros na função eval().
+
+    - InternalError: 
+    Uma exceção genérica para erros internos do ECMAScript. Menos comum e muitas vezes relacionada à implementação do JavaScript em si.

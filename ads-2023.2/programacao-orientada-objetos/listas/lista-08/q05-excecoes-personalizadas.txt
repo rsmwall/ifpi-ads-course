@@ -1,0 +1,4 @@
+5) Como você pode criar exceções personalizadas em TypeScript?
+
+    - é possível criar exceções personalizadas estendendo a classe Error ou criando classes que herdam dela. Isso permite definir 
+    exceções específicas para situações personalizadas dentro de sua aplicação.

@@ -1,0 +1,10 @@
+3) Como o TypeScript implementa o tratamento de exceções?
+
+    - O TypeScript, sendo um superset do JavaScript, utiliza o mesmo mecanismo de tratamento de exceções que o JavaScript. 
+    Esse mecanismo é baseado em blocos try, catch, finally e na criação e lançamento de objetos Error.
+
+    * elementos do tratamento de exceções em TypeScript:
+   
+        - Bloco try-catch
+        - Lançamento de exceções
+        - Object Error

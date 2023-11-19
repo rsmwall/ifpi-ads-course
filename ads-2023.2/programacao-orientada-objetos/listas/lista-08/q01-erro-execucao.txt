@@ -1,0 +1,14 @@
+1) Identifique pelo menos 3 “erros” que acontecem quando você está programando
+com TypeScript que levam à parada brusca da execução de código.
+
+    - TypeError: 
+    Cannot read property 'x' of undefined/null: Este erro ocorre quando se tenta acessar uma propriedade de um objeto que é undefined ou null. 
+    Isso pode acontecer quando há uma referência a um objeto que não foi devidamente inicializado ou quando uma função não retorna o valor esperado.
+
+    - ReferenceError: 
+    [variável/função] is not defined: Esse erro surge quando uma variável ou função é utilizada, mas não foi declarada ou está fora de escopo. 
+    Pode ocorrer devido a erros de digitação no nome da variável ou função, ou até mesmo por não ter sido importada ou definida corretamente.
+
+    - SyntaxError: 
+    Unexpected token: Esse erro ocorre quando há um erro de sintaxe no código. Pode ser causado por caracteres inválidos, falta de ponto e vírgula 
+    no final de uma linha, parênteses desbalanceados, entre outros problemas que infringem as regras da sintaxe do TypeScript.
