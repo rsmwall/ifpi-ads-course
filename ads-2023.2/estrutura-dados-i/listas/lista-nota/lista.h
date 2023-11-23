@@ -78,6 +78,8 @@ void substitui(Item x, Item y, Lista L) {
     }
 }
 
+//Se L for nulo, retorna nada. Se o item em L for igual ao elemento a substituir (x), então ele é substituido por y. Depois, chama a função recursivamente.
+
 int igual(Lista A, Lista B) {
     if (A == NULL && B == NULL) {
         return 1;
@@ -91,6 +93,12 @@ int igual(Lista A, Lista B) {
     return igual(A->prox, B->prox);
 }
 
+/**
+ * Se as duas listas forem nulas, retorna 1 pois são iguais. Se apenas UMA das listas for nula, retorna 0 pois são diferentes. 
+ * Se o item atual em A for diferente do item atual em B, também retorna 0. Depois, chama a função recursivamente, e se
+ * as duas condições para retornar 0 (não é igual) nunca forem acionadas, então a lista A é igual a lista B.
+/**/
+
 Item enesimo(int n, Lista L) {
     if (n < 1 || L == NULL) {
         printf("Erro fatal: Indice invalido!\n");
@@ -103,3 +111,9 @@ Item enesimo(int n, Lista L) {
         return enesimo(n - 1, L->prox);
     }
 }
+
+/**
+ * Se n for menor que 1 ou a lista for nula, ocorre um erro fatal e o código é abortado, pois o índice é inválido. Caso n seja IGUAL a 1,
+ * já retorna o primeiro item da lista, e caso seja maior que 1, diminui o índice por 1 e procura no próximo item até encontrar.
+ * Assim, se for mandado o número 2, o resultado será o segundo item da lista.
+/**/

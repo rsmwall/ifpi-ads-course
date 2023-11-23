@@ -23,6 +23,8 @@ int main() {
         cout << caractere;
     }
 
+    cout << "\n";
+
     return 0;
 }
 
@@ -30,4 +32,4 @@ int main() {
  * getline() para receber input do usuário e atribuir a frase, depois um loop for em que caso a frase
  * não tenha atingido seu final (caractere '\0'), empilha o caractere no topo da pilha, e caso tenha atingido, sai do loop
  * com o break. Depois, faz o print dos caracteres de maneira inversa, desempilhando-os.
-/**/
+*/
