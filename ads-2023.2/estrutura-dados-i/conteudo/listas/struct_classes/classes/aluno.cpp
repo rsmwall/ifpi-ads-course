@@ -1,35 +1,33 @@
 #include <iostream>
 
-using namespace std;
-
 class Aluno {
     private:
         int mat;
-        string nome;
+        std::string nome;
     
     public:
-        Aluno (int m, string n) {
+        Aluno (int m, std::string n) {
             mat = m;
             nome = n;
         }
         
         int getMat();
-        string getNome();
+        std::string getNome();
 };
 
 int Aluno::getMat() {
     return mat;
 }
 
-string Aluno::getNome() {
+std::string Aluno::getNome() {
     return nome;
 }
 
 int main() {
     Aluno a1(1, "Rafael");
 
-    cout << "Matricula: " << a1.getMat() << endl;
-    cout << "Nome: " << a1.getNome() << endl;
+    std::cout << "Matricula: " << a1.getMat() << std::endl;
+    std::cout << "Nome: " << a1.getNome() << std::endl;
 
     return 0;
 }

@@ -1,14 +1,12 @@
 #include <iostream>
 
-using namespace std;
-
 class Carro {
     public:
-        string modelo;
-        string marca;
+        std::string modelo;
+        std::string marca;
 
         Carro(){}
-        Carro(string x, string y) {
+        Carro(std::string x, std::string y) {
             modelo = x;
             marca = y;
         }
