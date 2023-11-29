@@ -1,0 +1,15 @@
+Try-catch:
+
+- Limitacoes de escopo, so pode capturar rros sincronos dentro do mesmo contexto de execucao, alem da questao de
+desempenho, onde o uso excessivo pode afetar o desempenho da aplicacao.
+
+Throw:
+
+- Limitacoes de customizacao, a personalizacao fica limitada a mensagem e ao tipo, e em algumas situacoes o rastreamento
+associado ao erro pode ser limitado, dificultando assim uma depuracao mais detalhada.
+
+Type Guard:
+
+- Restricao de tipos especificos, podem ser limitados quando necessario abranger todas as possibilidades de tipos complexos
+e personalizados, e quanto mais o codigo cresce pode ficar complexo e propenso a erros adicionar novos tipos e manter a
+logica do type guard.
