@@ -8,10 +8,12 @@
 
 // =============================
 
+#include <stdio.h>
+
 typedef struct aluno {
     int mat;
     float nota;
-    char nome[30];
+    char *nome;
 } Aluno;
 
 int main(void) {
@@ -23,9 +25,9 @@ int main(void) {
         printf("Digite a matricula: ");
         scanf("%d", &vet_aluno[i].mat);
         printf("Digite a nota: ");
-        scanf("%d", &vet_aluno[i].nota);
+        scanf("%f", &vet_aluno[i].nota);
         printf("Digite o nome: ");
-        scanf("%d", &vet_aluno[i].nome);
+        scanf("%s", vet_aluno[i].nome);
 
         i++;
     }
