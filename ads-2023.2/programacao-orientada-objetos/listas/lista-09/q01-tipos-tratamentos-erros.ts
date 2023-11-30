@@ -18,7 +18,7 @@ function verificaIdade(idade: number) {
 
 try {
     console.log(verificaIdade(-5))
-} catch (error) {
+} catch (error: any) {
     console.log('Erro: ', error.message)
 }
 

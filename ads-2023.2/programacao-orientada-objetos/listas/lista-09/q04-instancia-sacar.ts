@@ -1,4 +1,4 @@
-import { Conta } from "./q03-ate-q15/conta"
+import { Conta } from "./q03-07-08-09-10-11-12-13-14/conta"
 
 // QUESTAO 04
 let conta: Conta = new Conta("111", 200)

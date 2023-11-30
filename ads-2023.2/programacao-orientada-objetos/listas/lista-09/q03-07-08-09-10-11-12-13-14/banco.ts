@@ -1,4 +1,5 @@
 import { Conta, Poupanca } from "./conta";
+import { ContaInexistenteError, PoupancaInvalidaError } from "./error";
 
 export class Banco {
     private _contas: Conta[] = []
@@ -7,12 +8,19 @@ export class Banco {
         return this._contas
     }
 
-    public inserir(conta: Conta): boolean {
-        if (!this.consultar(conta.numero)) {
-            this.contas.push(conta)
-            return true
+    public inserir(conta: Conta): void {
+
+        // QUESTAO 13
+        try {
+            let contaProcurada = this.consultar(conta.numero)
+            console.log(`Conta ${conta.numero}, ja existe.`)
+        } catch (error: any) {
+            if (conta instanceof Poupanca) {
+                this._contas.push(<Poupanca> conta)
+            }
+
+            this._contas.push(conta)
         }
-        return false
     } 
 
     public consultar(numero: string): Conta {
@@ -23,6 +31,12 @@ export class Banco {
                 break
             }
         }
+
+        // QUESTAO 08
+        if (!contaProcurada) {
+            throw new ContaInexistenteError('Conta Inexistente.')
+        }
+
         return contaProcurada
     }
 
@@ -34,14 +48,18 @@ export class Banco {
                 break
             }
         }
+
+        // QUESTAO 08
+        if (indiceProcurado == undefined) {
+            throw new ContaInexistenteError('Conta Inexistente.')
+        }
+
         return indiceProcurado
     }
 
     public alterar(conta: Conta): void {
         let indice = this.consultarIndice(conta.numero)
-        if (indice != -1) {
-            this.contas[indice] = conta
-        }
+        this.contas[indice] = conta
     }
 
     public excluir(numero: string): void {
@@ -57,25 +75,19 @@ export class Banco {
 
     public depositar(numero: string, valor: number): void {
         let conta: Conta = this.consultar(numero)
-        if (conta != null) {
-            conta.depositar(valor)
-        }
+        conta.depositar(valor)
     }
 
     public sacar(numero: string, valor: number): void {
         let conta: Conta = this.consultar(numero)
-        if (conta != null) {
-            conta.sacar(valor)
-        }
+        conta.sacar(valor)
     }
 
     public transferir(numCredito: string, numDebito: string, valor: number): void {
         let cDebito: Conta = this.consultar(numDebito)
         let cCredito: Conta = this.consultar(numCredito)
 
-        if (cDebito && cCredito) {
-            cDebito.transferir(cCredito, valor)
-        }
+        cDebito.transferir(cCredito, valor)
     }
 
     public totalContas(): number {
@@ -103,9 +115,13 @@ export class Banco {
 
     public renderJuros(numero: string): void {
         let conta: Conta = this.consultar(numero)
-        if (conta instanceof Poupanca) {
-            (<Poupanca> conta).renderJuros()
+
+        // QUESTAO 12
+        if (!(conta instanceof Poupanca)) {
+            throw new PoupancaInvalidaError('Esta conta nao eh do tipo poupanca.')
         }
+
+        (<Poupanca> conta).renderJuros()
     }
 }
 

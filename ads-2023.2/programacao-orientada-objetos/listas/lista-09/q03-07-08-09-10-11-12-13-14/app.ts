@@ -12,33 +12,39 @@ do {
                 '4 - Depositar      5 - Excluir         6 - Transferir\n' +
                 '7 - Render Juros   0 - Sair\n')
     
-    opcao = input("Opcao: ")
+    // QUESTAO 14
+    try {
+        opcao = input("Opcao: ")
 
-    switch (opcao) {
-        case "1":
-            inserir()
-            break
-        case "2":
-            consultar()
-            break
-        case "3":
-            sacar()
-            break
-        case "4":
-            depositar()
-            break
-        case "5":
-            excluir()
-            break
-        case "6":
-            transferir()
-            break
-        case "7":
-            renderJuros()
-        default:
-            console.log("Opcao invalida")
+        switch (opcao) {
+            case "1":
+                inserir()
+                break
+            case "2":
+                consultar()
+                break
+            case "3":
+                sacar()
+                break
+            case "4":
+                depositar()
+                break
+            case "5":
+                excluir()
+                break
+            case "6":
+                transferir()
+                break
+            case "7":
+                renderJuros()
+            default:
+                console.log("Opcao invalida")
+        }
+    } catch (error: any) {
+        console.log(error.message)
+    } finally {
+        input("Operacao finalizada. Digite 0")
     }
-    input("Operacao finalizada. Digite <enter>")
 } while (opcao != "0")
 
 console.log("Aplicacao encerrada")

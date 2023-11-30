@@ -1,8 +1,17 @@
+import { ValorInvalidoError } from "./error"
+
 export class Conta {
     private _numero: string
     private _saldo: number
 
     constructor(numero: string, saldo: number) {
+        // QUESTAO 06
+        if (saldo < 0) {
+            throw new Error('Erro, saldo negativo.')
+        }
+
+        // QUESTAO 10
+        this.depositar(saldo)
         this._numero = numero
         this._saldo = saldo
     }
@@ -15,8 +24,16 @@ export class Conta {
         return this._saldo
     }
 
+    // QUESTAO 11
+    private validarValor(valor: number) {
+        if (valor <= 0) {
+            throw new ValorInvalidoError('Valor menor ou igual a zero.')
+        }
+    }
+
     // QUESTAO 03
     public sacar(valor: number): void {
+        this.validarValor(valor)
         if (this._saldo < valor) {
             throw new Error('Saldo insuficiente.')
         }
@@ -25,6 +42,7 @@ export class Conta {
     }
 
     public depositar(valor: number): void {
+        this.validarValor(valor)
         this._saldo += valor
     }
 
@@ -35,7 +53,6 @@ export class Conta {
     public transferir(contaDest: Conta, valor: number): void {
         this.sacar(valor)
         contaDest.depositar(valor)
-
     }
 }
 
@@ -80,7 +97,7 @@ export class ContaImposto extends Conta {
 // let poupanca: Poupanca = <Poupanca> conta 
 // poupanca.renderJuros()
 
-// // sem uso de cast
+// sem uso de cast
 
 // let contaP: Poupanca = new Poupanca("5", 200, 0.04)
 // contaP.depositar(100)
@@ -93,4 +110,3 @@ export class ContaImposto extends Conta {
 // conta.sacar(300)
 
 // ========================================================
-
