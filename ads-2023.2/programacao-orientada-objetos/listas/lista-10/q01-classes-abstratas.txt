@@ -1,0 +1,5 @@
+1. Podemos instanciar classes abstratas? Justifique.
+
+- Não, não é possível instanciar diretamente uma classe abstrata. Uma classe abstrata é uma classe que não pode ser instanciada por si só, 
+porque pode conter métodos não implementados (métodos abstratos) que precisam ser implementados pelas classes filhas. Ela serve como um 
+modelo para outras classes que estendem dela, fornecendo uma estrutura comum.

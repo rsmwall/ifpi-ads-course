@@ -1,0 +1,5 @@
+3. Se uma classe que herda de uma abstrata e não implementa os seus métodos, o
+que ocorre?
+
+- Se uma classe herda de uma classe abstrata e não implementa todos os métodos abstratos definidos na classe pai, essa classe 
+filha também será considerada abstrata.
