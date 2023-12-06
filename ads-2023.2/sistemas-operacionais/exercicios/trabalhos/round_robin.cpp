@@ -110,7 +110,6 @@ int main() {
         }
     } // fim do loop while
 
-     // Printing output
     cout << "Numero ";
     cout << "Tempo Chegada ";
     cout << "     Tempo dura. ";
