@@ -138,9 +138,9 @@ int main() {
             cout << " ";
             v += 1;
         }
-        cout << p[i].FT << "\t\t";
-        cout << p[i].WT << "\t\t";
-        cout << p[i].TAT << endl;
+        cout << (p[i].FT - troca_de_contexto) << "\t\t";
+        cout << (p[i].WT - troca_de_contexto) << "\t\t";
+        cout << (p[i].TAT - troca_de_contexto) << endl;
     }
 
     
