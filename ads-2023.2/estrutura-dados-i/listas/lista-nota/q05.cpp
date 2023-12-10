@@ -7,7 +7,7 @@ int main(void) {
     empilha (8,P); 
     
     while( topo(P)>0) empilha(topo (P)/2, P); 
-    while( !vaziap (P)) printf("%f\n", desempilha (P)); 
+    while( !vaziap (P)) printf("%d\n", desempilha (P)); 
     return 0;
 }
 
