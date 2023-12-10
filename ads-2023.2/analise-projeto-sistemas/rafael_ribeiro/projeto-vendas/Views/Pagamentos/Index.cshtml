@@ -1,0 +1,47 @@
+@model IEnumerable<projeto_vendas.Models.Pagamento>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DataLimite)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pago)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataLimite)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Valor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pago)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PagamentoId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PagamentoId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PagamentoId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

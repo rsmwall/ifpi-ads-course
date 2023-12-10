@@ -34,7 +34,7 @@ void algoritmoBanqueiro() {
     std::vector<std::array<int, 4>> matrizRequisicoes = {
         {2, 0, 0, 1},
         {1, 0, 1, 0},
-        {2, 1, 0, 0}
+        {2, 1, 0, 1}
     };
 
     std::vector<bool> executado(3, false);
