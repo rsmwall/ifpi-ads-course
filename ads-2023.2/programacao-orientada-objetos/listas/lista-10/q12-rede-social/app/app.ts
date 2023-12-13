@@ -105,33 +105,32 @@ class App {
         - Para pesquisar postagens por hahstags, utilize (#) antes da hahstag\n`)
 
         let busca: string = input("          | ")
-        if (/^@/.test(busca)) {
-            let user: string = busca.substring(1)
-            let perfil: Perfil | null = this._redeSocial.consultarPerfil(undefined, user)
-
-            if (perfil) {
-                console.log(`
-            Perfil Encontrado:
-
-            Id: ${perfil.id}
-            User: ${perfil.user}
-            E-mail: ${perfil.email}
-                `)
-            } else {
-                console.log("\n     Perfil nao encontrado!")
+        do {
+            if (/^@/.test(busca)) {
+                let user: string = busca.substring(1)
+                let perfil: Perfil | null = this._redeSocial.consultarPerfil(undefined, user)
+    
+                if (perfil) {
+                    console.log(`
+                Perfil Encontrado:
+    
+                Id: ${perfil.id}
+                User: ${perfil.user}
+                E-mail: ${perfil.email}
+                    `)
+                } else {
+                    console.log("\n     Perfil nao encontrado!")
+                }
+    
+                input("\n          Pressione Enter para retornar ao menu...")
+                this.menu()
+            } else if (/^#/.test(busca)) {
+                let hashtag: string = busca.substring(1)
+                this.consultarHashtag(hashtag)
+                input("\n          Pressione Enter para retornar ao menu...")
+                this.menu()
             }
-
-            input("\n          Pressione Enter para retornar ao menu...")
-            this.menu()
-        } else if (/^#/.test(busca)) {
-            let hashtag: string = busca.substring(1)
-            this.consultarHashtag(hashtag)
-            input("\n          Pressione Enter para retornar ao menu...")
-            this.menu()
-        } else {
-
-        }
-
+        } while (!busca)
     }
 
     public menu(): void {
