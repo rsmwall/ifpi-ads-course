@@ -63,20 +63,40 @@ export class Perfil {
      }
 
     public desseguir(desseguindo: Perfil): void {
+        let verificacao: boolean = false
+        let seguidorEncontrado: Perfil = new Perfil(0, '', '', '')
         for (let seguidor of this._seguidores) {
             if (desseguindo.id == seguidor._id) {
-                let indiceRemovido: number = this._seguidores.indexOf(seguidor)
-                this._seguidores.splice(indiceRemovido, 1)
+                verificacao = true
+                seguidorEncontrado = seguidor
+                break
             }
+        }
+
+        if (verificacao) {
+            let indiceRemovido: number = this._seguidores.indexOf(seguidorEncontrado)
+            this._seguidores.splice(indiceRemovido, 1)
+        } else {
+            throw new Error("Voce nao esta seguindo esse perfil")
         }
     }
 
     public desbloquear(desbloqueado: Perfil): void {
+        let verificacao: boolean = false
+        let bloqueadoEncontrado: Perfil = new Perfil(0, '', '', '')
         for (let bloqueado of this._bloqueados) {
             if (desbloqueado.id == bloqueado._id) {
-                let indiceRemovido: number = this._bloqueados.indexOf(bloqueado)
-                this._bloqueados.splice(indiceRemovido, 1)
+                verificacao = true
+                bloqueadoEncontrado = bloqueado
+                break
             }
+        }
+
+        if (verificacao) {
+            let indiceRemovido: number = this._bloqueados.indexOf(bloqueadoEncontrado)
+            this._bloqueados.splice(indiceRemovido, 1)
+        } else {
+            throw new Error("Este perfil nao esta bloqueado")   
         }
     }
     
