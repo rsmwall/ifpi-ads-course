@@ -1,10 +1,19 @@
-# Analysis and Systems Development Course
-### Repository for the Analysis and Systems Development Course at the Federal Institute of Piaui
-The course is divided into semesters and can be accessed through the desired semester.
+![IFPI-ASD-REPO-BANNER](https://github.com/rsmwall/ifpi-ads-course/blob/main/settings/assets/ifpi-asd-repo.png)
+
+<br>
+<div align="center">
+  <h1>Analysis and Systems Development Course</h1>
+  <h3>Repository for the Analysis and Systems Development Course at the Federal Institute of Piaui</h3>
+  <p>The course is divided into semesters and can be accessed through the desired semester.</p>
+</div>
+
+<br>
 
 ## ASD Module I - 2021.1
 
 In the first module of the course, an introduction to computing was given, as well as basic knowledge. This repository contains only codes from the Algorithm and Programming discipline.
+
+<br>
 
 ### Algorithm and Programming
 
@@ -21,15 +30,18 @@ In the first module of the course, an introduction to computing was given, as we
 
 <br>
 <br>
-Here are the codes used for the Algorithm and Programming discipline, the JavaScript language and the Node.JS framework were used.
+
+Here are the codes used for the [Algorithm and Programming](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2021.1/algoritmos) discipline, the JavaScript language and the Node.JS framework were used.
 The subject was divided between exercises and two assessments, one every two months and one every six months.
 
-  * folder with [exercises](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2021.1/algoritmos/listas).
-  * folder with [assessments](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2021.1/algoritmos/avaliacoes).
+<hr>
+<br>
 
 ## ASD Module II - 2021.2 (incomplete)
 
 This model is incomplete because the study period has not been completed. Here are the first codes for the Data Structure I and Object Oriented Programming disciplines.
+
+<br>
 
 ### Data Structure I
 
@@ -42,9 +54,8 @@ This model is incomplete because the study period has not been completed. Here a
 
 <br>
 <br>
-This course contains just a few exercises in C++.
 
-  * folder with [exercises](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2021.2/estrutura-dados-l/listas).
+This [Data Structure I](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2021.2/estrutura-dados-l) folder contains just a few exercises in C++.
 
 ### Object Oriented Programming
 
@@ -62,11 +73,13 @@ This course contains just a few exercises in C++.
 
 <br>
 <br>
-This course contains just a few javascript review exercises.
 
-  * folder with [exercises](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2021.2/programacao-orientada-objetos/listas/lista-revisao-js).
+This [Object Oriented Programming](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2021.2/programacao-orientada-objetos) folder contains just a few javascript review exercises.
 
-## ASD Module II - 2023.2 (actual)
+<hr>
+<br>
+
+## ASD Module II - 2023.2
 
 This module is still being studied, so it will be updated whenever there are new exercises and/or assessments, here are codes, pdf, and other content related to each discipline, namely: Data Structure I, Object Oriented Programming...
 
