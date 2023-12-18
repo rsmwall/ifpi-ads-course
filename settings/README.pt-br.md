@@ -141,6 +141,7 @@ Em [Engenharia de Software I](https://github.com/rsmwall/ifpi-ads-course/tree/ma
 
 <br>
 <br>
+
 Esta disciplina de [Estrutura de Dados I](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/estrutura-dados-i) contém avaliações, exercícios, materiais de aula (livros, slides), códigos feitos em aula. Cobrindo tudo, desde o básico em C até classes em C++, estrutura, alocações dinâmicas e estáticas, merge sort, etc.
 
 ### Programação Orientada a Objetos
