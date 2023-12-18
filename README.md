@@ -4,7 +4,7 @@
   <h3>Repository for the Analysis and Systems Development Course at the Federal Institute of Piaui</h3>
   <p>The course is divided into semesters and can be accessed through the desired semester.</p>
 
-  <a href="#"><img src="https://img.shields.io/badge/LANG-PT_BR-6FDA44?style=for-the-badge&logoColor=E9D44D&labelColor=181e26&textColor=0D1117" /></a>  
+  [<img src="https://img.shields.io/badge/LANG-PT_BR-6FDA44?style=for-the-badge&logoColor=E9D44D&labelColor=181e26&textColor=0D1117" />](https://github.com/rsmwall/ifpi-ads-course/blob/main/settings/README.pt-br.md)
 </div>
 
 <br>
