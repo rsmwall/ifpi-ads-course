@@ -39,7 +39,7 @@ The subject was divided between exercises and two assessments, one every two mon
 
 ## ASD Module II - 2021.2 (incomplete)
 
-This model is incomplete because the study period has not been completed. Here are the first codes for the Data Structure I and Object Oriented Programming disciplines.
+This module is incomplete because the study period has not been completed. Here are the first codes for the Data Structure I and Object Oriented Programming disciplines.
 
 <br>
 
