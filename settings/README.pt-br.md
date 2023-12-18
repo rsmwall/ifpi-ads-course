@@ -4,7 +4,7 @@
   <h3>Repositório para o curso de Análise e Desenvolvimento de Sistemas do Intituto Federal do Piauí</h3>
   <p>O curso é dividido em semestres e pode ser acessado através do semestre desejado.</p>
 
-  [<img src="https://img.shields.io/badge/LANG-EN_US-003A9B?style=for-the-badge&logoColor=E9D44D&labelColor=181e26&textColor=0D1117" />](https://github.com/rsmwall/ifpi-ads-course/README.md)
+  [<img src="https://img.shields.io/badge/LANG-EN_US-003A9B?style=for-the-badge&logoColor=E9D44D&labelColor=181e26&textColor=0D1117" />](https://github.com/rsmwall/ifpi-ads-course/blob/main/README.md)
 </div>
 
 <br>
