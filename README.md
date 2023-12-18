@@ -1,8 +1,6 @@
 ![IFPI-ASD-REPO-BANNER](https://github.com/rsmwall/ifpi-ads-course/blob/main/settings/assets/ifpi-asd-repo.png)
 
-<br>
 <div align="center">
-  <h1>Analysis and Systems Development Course</h1>
   <h3>Repository for the Analysis and Systems Development Course at the Federal Institute of Piaui</h3>
   <p>The course is divided into semesters and can be accessed through the desired semester.</p>
 </div>
