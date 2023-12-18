@@ -1,23 +1,23 @@
-![IFPI-ASD-REPO-BANNER](https://github.com/rsmwall/ifpi-ads-course/blob/main/settings/assets/ifpi-asd-repo.png)
+![IFPI-ASD-REPO-BANNER](https://github.com/rsmwall/ifpi-ads-course/blob/main/settings/assets/ifpi-ads-repo.png)
 
 <div align="center">
-  <h3>Repository for the Analysis and Systems Development Course at the Federal Institute of Piaui</h3>
-  <p>The course is divided into semesters and can be accessed through the desired semester.</p>
+  <h3>Repositório para o curso de Análise e Desenvolvimento de Sistemas do Intituto Federal do Piauí</h3>
+  <p>O curso é dividido em semestres e pode ser acessado através do semestre desejado.</p>
 
-  <a href="#"><img src="https://img.shields.io/badge/LANG-PT_BR-6FDA44?style=for-the-badge&logoColor=E9D44D&labelColor=181e26&textColor=0D1117" /></a>  
+  [<img src="https://img.shields.io/badge/LANG-EN_US-003A9B?style=for-the-badge&logoColor=E9D44D&labelColor=181e26&textColor=0D1117" />](https://github.com/rsmwall/ifpi-ads-course/README.md)
 </div>
 
 <br>
 
-## ASD Module I - 2021.1
+## ADS Módulo I - 2021.1
 
-In the first module of the course, an introduction to computing was given, as well as basic knowledge. This repository contains only codes from the Algorithm and Programming discipline.
+No primeiro módulo do curso foi ministrada uma introdução à informática, bem como conhecimentos básicos. Este repositório contém apenas códigos da disciplina de Algoritmo e Programação.
 
 <br>
 
-### Algorithm and Programming
+### Algoritmo e Programação
 
-##### Languages and Tools:
+##### Linguagens e Ferramentas:
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/-JavaScript-0D1117?style=for-the-badge&logo=javascript&logoColor=E9D44D&labelColor=181e26&textColor=0D1117">&nbsp;
   <img src="https://img.shields.io/badge/-JavaScript-white?style=for-the-badge&logo=javascript&logoColor=E9D44D&labelColor=f0f0f0&textColor=0D1117">&nbsp;
@@ -31,21 +31,21 @@ In the first module of the course, an introduction to computing was given, as we
 <br>
 <br>
 
-Here are the codes used for the [Algorithm and Programming](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2021.1/algoritmos) discipline, the JavaScript language and the Node.JS framework were used.
-The subject was divided between exercises and two assessments, one every two months and one every six months.
+Aqui estão os códigos usados ​​para a disciplina [Algoritmo e Programação](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2021.1/algoritmos), a linguagem JavaScript e o framework Node.JS foram usados.
+A disciplina foi dividida entre exercícios e duas avaliações, uma bimestral e outra semestral.
 
 <hr>
 <br>
 
-## ASD Module II - 2021.2 (incomplete)
+## ADS Módulo II - 2021.2 (incompleto)
 
-This model is incomplete because the study period has not been completed. Here are the first codes for the Data Structure I and Object Oriented Programming disciplines.
+Este módulo está incompleto porque o período de estudo não foi concluído. Aqui estão os primeiros códigos das disciplinas de Estrutura de Dados I e Programação Orientada a Objetos.
 
 <br>
 
-### Data Structure I
+### Estrutura de Dados I
 
-##### Languages and Tools:
+##### Linguagens e Ferramentas:
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/-C%2B%2B-0D1117?style=for-the-badge&logo=c%2B%2B&logoColor=00599C&labelColor=181e26&textColor=0D1117">&nbsp;
@@ -55,11 +55,11 @@ This model is incomplete because the study period has not been completed. Here a
 <br>
 <br>
 
-This [Data Structure I](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2021.2/estrutura-dados-l) folder contains just a few exercises in C++.
+Esta pasta [Estrutura de Dados I](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2021.2/estrutura-dados-l) contém apenas alguns exercícios em C++.
 
-### Object-Oriented Programming
+### Programação Orientada a Objetos
 
-##### Languages and Tools:
+##### Linguagens e Ferramentas:
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/-JavaScript-0D1117?style=for-the-badge&logo=javascript&logoColor=E9D44D&labelColor=181e26&textColor=0D1117">&nbsp;
@@ -74,20 +74,20 @@ This [Data Structure I](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads
 <br>
 <br>
 
-This [Object Oriented Programming](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2021.2/programacao-orientada-objetos) folder contains just a few javascript review exercises.
+Esta pasta [Programação Orientada a Objetos](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2021.2/programacao-orientada-objetos) contém apenas alguns exercícios de revisão de Javascript.
 
 <hr>
 <br>
 
-## ASD Module II - 2023.2
+## ADS Módulo II - 2023.2
 
-This module contains eight subjects offered, including activities, assessments, materials used in the classroom such as books, codes, handouts and slides, as well as exercise solutions and the exercises themselves.
+Este módulo contém oito disciplinas oferecidas, entre atividades, avaliações, materiais utilizados em sala de aula como livros, códigos, apostilas e slides, além de soluções de exercícios e os próprios exercícios.
 
 <br>
 
-### Systems Analysis and Design
+### Análise e Projeto de Sistemas
 
-##### Languages and Tools:
+##### Linguagens e Ferramentas:
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/-.NET-0D1117?style=for-the-badge&logo=dotnet&logoColor=6A4097&labelColor=181e26&textColor=0D1117">&nbsp;
@@ -102,15 +102,14 @@ This module contains eight subjects offered, including activities, assessments, 
 <br>
 <br>
 
-In the [Systems Analysis and Design](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/analise-projeto-sistemas) discipline, the concepts of UML (Unified Modeling Language) were presented, as well as the basic creation of projects using .NET 6.0 and MySql.
+Na disciplina [Análise e Projeto de Sistemas](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/analise-projeto-sistemas), os conceitos de UML (Unified Modeling Language) foram apresentados, bem como a criação básica de projetos utilizando .NET 6.0 e MySql.
 
-### Computer Architecture
+### Arquitetura de Computadores
+Em [Arquitetura de Computadores](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/arquitetura-computadores), foram apresentados os conceitos e a história dos hardwares e periféricos de computadores. Esta disciplina utilizou slides que estão disponíveis neste repositório.
 
-In [Computer Architecture](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/arquitetura-computadores), the concepts and history of computer hardware and peripherals were presented. This subject used slides that are available in this repository.
+### Banco de Dados I
 
-### Databases I
-
-##### Languages and Tools:
+##### Linguagens e Ferramentas:
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/-PostgreSQL-0D1117?style=for-the-badge&logo=postgresql&logoColor=316192&labelColor=181e26&textColor=0D1117">&nbsp;
@@ -120,15 +119,15 @@ In [Computer Architecture](https://github.com/rsmwall/ifpi-ads-course/tree/main/
 <br>
 <br>
 
-The [Database I](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/banco-dados-i) discipline provided the basis of the content, starting from Entity-Relationship Diagram, Relational Algebra to SQL bases using PostgreSQL.
+A disciplina [Banco de Dados I](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/banco-dados-i) forneceu a base do conteúdo, desde Diagrama Entidade-Relacionamento, Álgebra Relacional até bases SQL usando PostgreSQL.
 
-### Software Engineering I
+### Engenharia de Software I
 
-In [Software Engineering I](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/engenharia-software-i), we saw the basic concepts of software engineering such as development methodologies, SCRUM and XP.
+Em [Engenharia de Software I](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/engenharia-software-i), vimos os conceitos básicos da engenharia de software como metodologias de desenvolvimento , SCRUM e XP.
 
-### Data Structure I
+### Estrutura de Dados I
 
-##### Languages and Tools:
+##### Linguagens e Ferramentas:
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/-C-0D1117?style=for-the-badge&logo=c&logoColor=00599C&labelColor=181e26&textColor=0D1117">&nbsp;
@@ -142,12 +141,11 @@ In [Software Engineering I](https://github.com/rsmwall/ifpi-ads-course/tree/main
 
 <br>
 <br>
+Esta disciplina de [Estrutura de Dados I](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/estrutura-dados-i) contém avaliações, exercícios, materiais de aula (livros, slides), códigos feitos em aula. Cobrindo tudo, desde o básico em C até classes em C++, estrutura, alocações dinâmicas e estáticas, merge sort, etc.
 
-This [Data Structure I](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/estrutura-dados-i) contains assessments, exercises, class materials (books, slides), codes made in class. Covering everything from the basics in C, to classes in C++, structure, dynamic and static allocations, merge sort, etc.
+### Programação Orientada a Objetos
 
-### Object-Oriented Programming
-
-##### Languages and Tools:
+##### Linguagens e Ferramentas:
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/-TypeScript-0D1117?style=for-the-badge&logo=typescript&logoColor=007ACC&labelColor=181e26&textColor=0D1117">&nbsp;
@@ -162,8 +160,8 @@ This [Data Structure I](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads
 <br>
 <br>
 
-This [Object-Oriented Programming](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/programacao-orientada-objetos), the bases of the TypeScript language were seen, as well as the bases of OOP, extending to methods, classes, abstract classes, exceptions and interfaces. This content is divided between room codes, exercises and assessments. With emphasis on [Rede Social](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/programacao-orientada-objetos/avaliacoes/rede-social), a simple social network program for terminals.
+Nesta disciplina de [Programação Orientada a Objetos](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/programacao-orientada-objetos), foram vistas as bases da linguagem TypeScript, também como bases da POO, estendendo-se a métodos, classes, classes abstratas, exceções e interfaces. Este conteúdo está dividido entre códigos de sala, exercícios e avaliações. Com destaque para a [Rede Social](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/programacao-orientada-objetos/avaliacoes/rede-social), um programa simples de rede social para terminais.
 
-### Operating Systems
+### Sistemas Operacionais
 
-In [Operating Systems](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/sistemas-operacionais), the bases of the systems were shown, such as processes, scheduling, process communication and coordination, banker's algorithm, deadlocks and memory management. Here are the two books used in the discipline, namely: Machado Maia and Maziero. As well as assessments, challenges such as Round Robin and Banker's Algorithm made in C++ and about Threads and System Calls in Ruby.
+Em [Sistemas Operacionais](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/sistemas-operacionais), foram mostradas as bases dos sistemas, como processos, escalonamento, comunicação e coordenação de processos, algoritmo do banqueiro, impasses e gerenciamento de memória. Aqui estão os dois livros utilizados na disciplina, sendo eles: Machado Maia e Maziero. Além de avaliações, desafios como Round Robin e Algoritmo do Banqueiro feitos em C++ e sobre Threads e Chamadas de Sistema em Ruby.
