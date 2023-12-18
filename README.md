@@ -55,7 +55,7 @@ This model is incomplete because the study period has not been completed. Here a
 
 This [Data Structure I](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2021.2/estrutura-dados-l) folder contains just a few exercises in C++.
 
-### Object Oriented Programming
+### Object-Oriented Programming
 
 ##### Languages and Tools:
 
@@ -79,7 +79,50 @@ This [Object Oriented Programming](https://github.com/rsmwall/ifpi-ads-course/tr
 
 ## ASD Module II - 2023.2
 
-This module is still being studied, so it will be updated whenever there are new exercises and/or assessments, here are codes, pdf, and other content related to each discipline, namely: Data Structure I, Object Oriented Programming...
+This module contains eight subjects offered, including activities, assessments, materials used in the classroom such as books, codes, handouts and slides, as well as exercise solutions and the exercises themselves.
+
+<br>
+
+### Systems Analysis and Design
+
+##### Languages and Tools:
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/-.NET-0D1117?style=for-the-badge&logo=dotnet&logoColor=6A4097&labelColor=181e26&textColor=0D1117">&nbsp;
+  <img src="https://img.shields.io/badge/-.NET-0D1117-white?style=for-the-badge&logo=dotnet&logoColor=6A4097&labelColor=f0f0f0&textColor=0D1117">&nbsp;
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/-MySql-0D1117?style=for-the-badge&logo=mysql&logoColor=005C84&labelColor=181e26&textColor=0D1117">&nbsp;
+  <img src="https://img.shields.io/badge/-MySql-0D1117-white?style=for-the-badge&logo=mysql&logoColor=005C84&labelColor=f0f0f0&textColor=0D1117">&nbsp;
+</picture>
+
+<br>
+<br>
+
+In the [Systems Analysis and Design](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/analise-projeto-sistemas) discipline, the concepts of UML (Unified Modeling Language) were presented, as well as the basic creation of projects using .NET 6.0 and MySql.
+
+### Computer Architecture
+
+In [Computer Architecture](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/arquitetura-computadores), the concepts and history of computer hardware and peripherals were presented. This subject used slides that are available in this repository.
+
+### Databases I
+
+##### Languages and Tools:
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/-PostgreSQL-0D1117?style=for-the-badge&logo=postgresql&logoColor=316192&labelColor=181e26&textColor=0D1117">&nbsp;
+  <img src="https://img.shields.io/badge/-PostgreSQL-0D1117-white?style=for-the-badge&logo=postgresql&logoColor=316192&labelColor=f0f0f0&textColor=0D1117">&nbsp;
+</picture>
+
+<br>
+<br>
+
+The [Database I](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/banco-dados-i) discipline provided the basis of the content, starting from Entity-Relationship Diagram, Relational Algebra to SQL bases using PostgreSQL.
+
+### Software Engineering I
+
+In [Software Engineering I](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/engenharia-software-i), we saw the basic concepts of software engineering such as development methodologies, SCRUM and XP.
 
 ### Data Structure I
 
@@ -97,18 +140,16 @@ This module is still being studied, so it will be updated whenever there are new
 
 <br>
 <br>
-This subject has its exercises solved in C/C++.
 
-  * folder with [exercises](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/estrutura-dados-i/listas).
-  * folder with [content](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/estrutura-dados-i/conteudo).
+This [Data Structure I](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/estrutura-dados-i) contains assessments, exercises, class materials (books, slides), codes made in class. Covering everything from the basics in C, to classes in C++, structure, dynamic and static allocations, merge sort, etc.
 
-### Object Oriented Programming
+### Object-Oriented Programming
 
 ##### Languages and Tools:
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/-TypeScript-0D1117?style=for-the-badge&logo=typescript&logoColor=2F74C0&labelColor=181e26&textColor=0D1117">&nbsp;
-  <img src="https://img.shields.io/badge/-TypeScript-white?style=for-the-badge&logo=typescript&logoColor=2F74C0&labelColor=f0f0f0&textColor=0D1117">&nbsp;
+  <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/-TypeScript-0D1117?style=for-the-badge&logo=typescript&logoColor=007ACC&labelColor=181e26&textColor=0D1117">&nbsp;
+  <img src="https://img.shields.io/badge/-TypeScript-white?style=for-the-badge&logo=typescript&logoColor=007ACC&labelColor=f0f0f0&textColor=0D1117">&nbsp;
 </picture>
 
 <picture>
@@ -118,6 +159,9 @@ This subject has its exercises solved in C/C++.
 
 <br>
 <br>
-Having been given the freedom to take this subject using TypeScript and/or Java, here you will have codes in both languages.
 
-  * folder with [exercises](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/programacao-orientada-objetos/listas).
+This [Object-Oriented Programming](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/programacao-orientada-objetos), the bases of the TypeScript language were seen, as well as the bases of OOP, extending to methods, classes, abstract classes, exceptions and interfaces. This content is divided between room codes, exercises and assessments. With emphasis on [Rede Social](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/programacao-orientada-objetos/avaliacoes/rede-social), a simple social network program for terminals.
+
+### Operating Systems
+
+In [Operating Systems](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/sistemas-operacionais), the bases of the systems were shown, such as processes, scheduling, process communication and coordination, banker's algorithm, deadlocks and memory management. Here are the two books used in the discipline, namely: Machado Maia and Maziero. As well as assessments, challenges such as Round Robin and Banker's Algorithm made in C++ and about Threads and System Calls in Ruby.
