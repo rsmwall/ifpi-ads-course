@@ -25,7 +25,7 @@ TypeScript;
 * Atividades de revisão;
 * Introdução ao TypeScript: declaração de variáveis e tipos de dados;
 * Introdução ao TypeScript: funções;
-* ntrodução à POO: objetos e classes;
+* Introdução à POO: objetos e classes;
 * Construtores e inicialização de atributos;
 * Arrays, Strings e arrays de objetos;
 * Encapsulamento;
