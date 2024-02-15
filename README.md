@@ -9,6 +9,19 @@
 
 <br>
 
+## Modules
+
+| Module I                        | Module II                           | Module III              | Module IV                      | Module V                        |
+|---------------------------------|-------------------------------------|-------------------------|--------------------------------|---------------------------------|
+| Algorithm and Programming       | Databases I                         | Databases II            | Internet Programming II        | Information Security            |
+| Technical English               | Operating Systems                   | Data Structure II       | Software Engineering III       | Entrepreneurship and Innovation |
+| Introduction to Computing       | Object-Oriented Programming         | Internet Programming I  | Programming for Mobile Devices | Special Topics in Computing     |
+| Language Activities             | Computer Architecture               | Software Engineering II | Human Computer Interaction     | Curriculum Extension II         |
+| Computational Mathematics       | Software Engineering I              | Extension Planning      | Curriculum Extension I         | Final Project                   |
+| Scientific Research Methodology | Data Structure I                    | Computer Network        | Project Preparation            | Legislation Applied to IT       |
+| Statistics                      | Systems Analysis and Design         | Artificial Intelligence | Special Topics in Programming  | Ethnic-Racial Education         |
+| Introduction to Administration  | Foundations of Extension Curriculum |                         |                                | Optional Subject*               |
+
 ## ASD Module I - 2021.1
 
 In the first module of the course, an introduction to computing was given, as well as basic knowledge. This repository contains only codes from the Algorithm and Programming discipline.
