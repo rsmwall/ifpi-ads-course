@@ -9,6 +9,19 @@
 
 <br>
 
+## Módulos
+
+| Módulo I                           | Módulo II                                | Módulo III                  | Módulo IV                            | Módulo V                        |
+|------------------------------------|------------------------------------------|-----------------------------|--------------------------------------|---------------------------------|
+| Algoritmos e Programação           | Banco de Dados I                         | Banco de Dados II           | Programação para Internet II         | Segurança da Informação         |
+| Inglês Técnico                     | Sistemas Operacionais                    | Estrutura de Dados II       | Engenharia de Software III           | Empreendedorismo e Inovação     |
+| Introdução à Computação            | Programação Orientada a Objetos          | Programação para Internet I | Programação para Dispositivos Móveis | Tópicos Especiais em Computação |
+| Atividades Linguísticas            | Arquitetura de Computadores              | Engenharia de Software II   | Interação Humano Computador          | Extensão Curricular II          |
+| Matematica Computacional           | Engenharia de Software I                 | Planejamento Extensionista  | Extensão Curricular I                | Trabalho de Conclusão de Curso  |
+| Metodologia da Pesquisa Científica | Estrutura de Dados I                     | Redes de Computadores       | Elaboração de Projeto                | Legislação Aplicada à TI        |
+| Estatística                        | Análise e Projeto de Sistemas            | Inteligência Artificial     | Tópicos Especiais em Programação     | Educação Ético-Racial           |
+| Introdução à Administração         | Fundamentos Curricularização da Extensão |                             |                                      | Disciplina Optativa*            |
+
 ## ADS Módulo I - 2021.1
 
 No primeiro módulo do curso foi ministrada uma introdução à informática, bem como conhecimentos básicos. Este repositório contém apenas códigos da disciplina de Algoritmo e Programação.
