@@ -4,4 +4,11 @@ a)
     da média.
 
 b)
-    
+    Levando em conta que 2000 é o terceiro quartil, existem 25% de pessoas acima que 2000.
+
+c) 
+    500, levando em conta que metade dos salarios esta entre os 1000 e os 2000
+
+d)
+    O estado B é mais justo, pois a média esta mais proxima da mediana que o estado A, o que implica que
+    existem extremos bem menores nesse estado.

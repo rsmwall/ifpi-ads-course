@@ -1,0 +1,8 @@
+media = 7.70
+mediana = 7.5
+variancia = 0.21
+dp = 0.43
+cv = 6%
+
+o desvio padrão fornece uma medida absoluta da dispersão, o coeficiente de variação fornece uma medida 
+relativa expressa como uma porcentagem
