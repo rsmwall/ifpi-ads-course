@@ -1,0 +1,7 @@
+a) 
+    Se o primeiro quartil corresponde a 1000 e o terceiro quartil corresponde a 2000, entende-se
+    que a mediana está entre esses dois valores. Se a média é 3.500, a mediana dos salarios é abaixo
+    da média.
+
+b)
+    
