@@ -1,0 +1,15 @@
+No resumo do artigo é introduzido que os cursos da área de TI são compostos em sua maioria por estudantes homens, 
+e que o artigo visa fornecer métricas para ações futuras sobre essa diferença. O texto prossegue falando sobre algumas 
+mulheres que tiveram papéis importantes em TI, como Ada Lovelace, e fazendo uma citação de Amaral, onde diz que é 
+impossível separar o desenvolvimento tecnológico  dos valores sociais, e fala em como os primeiros usos do computador, 
+sendo para jogos lúdicos fez com que os meninos se aproximassem mais do que as meninas, impactando em suas escolhas futuras.
+
+Com base nos diferentes parâmetros analisados, chegou-se a conclusão que em questão de idade, não havia uma diferença muito 
+grande entre homens e mulheres, além disso que em sua maioria, estudantes desses cursos se incluem na faixa entre 20 e 30 
+anos. Também foi possível constatar que o número de mulheres vem diminuindo, em um nível talvez preocupante, tendo em vista 
+que do número inicial da comparação (20% de mulheres para 80% de homens), para 15% de mulheres e 85% de homens em 10 anos 
+representa uma queda de 5% em um total que já era baixo e piorou com o passar dos anos.
+
+O artigo conclui afirmando que o resultado da pesquisa constatou que o número de mulheres na área de TI vem diminuindo e 
+que esse resultado também foi obtido por outras duas pesquisas, uma na UFPB e outra no IME-USP. E afirma que os setores 
+administrativos da educação devem usar esses dados para criar soluções para essa diminuição das buscas desses cursos por mulheres.
