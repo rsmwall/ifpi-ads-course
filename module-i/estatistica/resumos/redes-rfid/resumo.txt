@@ -1,0 +1,19 @@
+O artigo aborda a resolução instantânea de colisões para identificação de 
+tags em redes RFID, propondo uma versão modificada do protocolo Slotted Aloha 
+para reduzir o número de colisões. Apresenta uma avaliação comparativa de 
+protocolos de resolução de colisões para problemas de identificação de tags 
+em redes RFID, com resultados de experimentos de simulação. A rápida e confiável 
+identificação de objetos é essencial em diversas aplicações, como controle de 
+produção, identificação de animais e localização de objetos, sendo a tecnologia 
+RFID uma escolha promissora para esses fins. A tecnologia RFID utiliza etiquetas 
+RF anexadas aos objetos a serem identificados, operando com leitores eletromagnéticos 
+em rede. As tags podem ser ativas, com recursos de armazenamento e energia própria, 
+ou passivas, dependendo da energia do leitor. O artigo apresenta um novo protocolo 
+de identificação de tags que supera outros protocolos avaliados, abordando a 
+complexidade e capacidade de computação das tags no processo de identificação. 
+A comparação de desempenho entre protocolos existentes é essencial para melhorar 
+a eficiência dos sistemas RFID, considerando as restrições de memória e energia 
+das tags passivas. Essa avaliação é importante para prever requisitos de recursos 
+e energia necessários para o funcionamento adequado de um sistema de identificação por radiofrequência.
+
+link do artigo: https://www.sciencedirect.com/science/article/abs/pii/S1570870507000406
