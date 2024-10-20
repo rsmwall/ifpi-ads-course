@@ -1,0 +1,31 @@
+Este artigo apresenta uma análise detalhada do desempenho das equipes do Novo Basquete Brasil (NBB) 
+nas últimas três temporadas. O objetivo principal do estudo foi examinar o desenvolvimento do basquete 
+brasileiro, com foco em indicadores estatísticos de desempenho como pontos marcados, tentativas e 
+conversões, assistências, rebotes, turnovers e outros fatores avançados. A análise abrange as temporadas 
+2020-2023, revelando tendências como o aumento das tentativas de 3 pontos e o seu impacto nos ressaltos 
+ofensivos, bem como alterações na eficiência das equipas e nas estratégias defensivas com base no estudo 
+de dados de avaliação estatística. Além disso, o artigo também mostra a competitividade contínua do 
+NBB durante a pandemia da COVID-19, bem como os seus esforços para se adaptar e crescer em popularidade.
+
+Esta pesquisa fornece informações valiosas para treinadores, analistas estatísticos e fãs de esportes, 
+fornecendo uma base sólida para pesquisas futuras nesta área. Adicionalmente, este estudo contribui 
+para a compreensão das mudanças no basquete brasileiro e suas implicações para o futuro do basquetebol do país.
+
+Dados do artigo:
+Tabela 1: Descrição do número de times participantes e número de partidas em cada temporada do NBB; 
+Fonte: NBB BRASIL (https://lnb.com.br/nbb/estisticas)
+
+Tabela 2: Definições de indicadores avançados de desempenho estatístico (IEDs)
+
+Tabela 3: Análise percentual
+
+Tabela 4: Valor médio e desvio padrão do total de pontos e desempenho de arremessos das equipes 
+participantes dos programas NBB 2020/21, 2021/22 e 2022/23
+
+Tabela 5: Valores de referência para execução de dois pontos, três pontos e lance livre com base no desempenho
+
+Tabela 6: Médias e desvios padrão de rebotes, assistências, roubos de bola, bloqueios, faltas e 
+indicadores de desempenho das equipes participantes dos programas NBB 2020/21, 2021/22 e 2022/23
+
+Esses dados fornecem informações detalhadas sobre o desempenho da equipe no NBB e podem ser usados 
+​​para analisar tendências e melhorar estratégias de treinamento e competição.
