@@ -50,48 +50,6 @@ The subject was divided between exercises and two assessments, one every two mon
 <hr>
 <br>
 
-## ASD Module II - 2021.2 (incomplete)
-
-This module is incomplete because the study period has not been completed. Here are the first codes for the Data Structure I and Object Oriented Programming disciplines.
-
-<br>
-
-### Data Structure I
-
-##### Languages and Tools:
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/-C%2B%2B-0D1117?style=for-the-badge&logo=c%2B%2B&logoColor=00599C&labelColor=181e26&textColor=0D1117">&nbsp;
-  <img src="https://img.shields.io/badge/-C%2B%2B-white?style=for-the-badge&logo=c%2B%2B&logoColor=00599C&labelColor=f0f0f0&textColor=0D1117">&nbsp;
-</picture>
-
-<br>
-<br>
-
-This [Data Structure I](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2021.2/estrutura-dados-l) folder contains just a few exercises in C++.
-
-### Object-Oriented Programming
-
-##### Languages and Tools:
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/-JavaScript-0D1117?style=for-the-badge&logo=javascript&logoColor=E9D44D&labelColor=181e26&textColor=0D1117">&nbsp;
-  <img src="https://img.shields.io/badge/-JavaScript-white?style=for-the-badge&logo=javascript&logoColor=E9D44D&labelColor=f0f0f0&textColor=0D1117">&nbsp;
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/-Node%20js-0D1117?style=for-the-badge&logo=nodedotjs&logoColor=339933&labelColor=181e26&textColor=0D1117">&nbsp;
-  <img src="https://img.shields.io/badge/-Node%20js-white?style=for-the-badge&logo=nodedotjs&logoColor=339933&labelColor=f0f0f0&textColor=0D1117">&nbsp;
-</picture>
-
-<br>
-<br>
-
-This [Object Oriented Programming](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2021.2/programacao-orientada-objetos) folder contains just a few javascript review exercises.
-
-<hr>
-<br>
-
 ## ASD Module II - 2023.2
 
 This module contains eight subjects offered, including activities, assessments, materials used in the classroom such as books, codes, handouts and slides, as well as exercise solutions and the exercises themselves.
@@ -99,18 +57,6 @@ This module contains eight subjects offered, including activities, assessments, 
 <br>
 
 ### Systems Analysis and Design
-
-##### Languages and Tools:
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/-.NET-0D1117?style=for-the-badge&logo=dotnet&logoColor=6A4097&labelColor=181e26&textColor=0D1117">&nbsp;
-  <img src="https://img.shields.io/badge/-.NET-0D1117-white?style=for-the-badge&logo=dotnet&logoColor=6A4097&labelColor=f0f0f0&textColor=0D1117">&nbsp;
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/-MySql-0D1117?style=for-the-badge&logo=mysql&logoColor=005C84&labelColor=181e26&textColor=0D1117">&nbsp;
-  <img src="https://img.shields.io/badge/-MySql-0D1117-white?style=for-the-badge&logo=mysql&logoColor=005C84&labelColor=f0f0f0&textColor=0D1117">&nbsp;
-</picture>
 
 <br>
 <br>
@@ -122,13 +68,6 @@ In the [Systems Analysis and Design](https://github.com/rsmwall/ifpi-ads-course/
 In [Computer Architecture](https://github.com/rsmwall/ifpi-ads-course/tree/main/ads-2023.2/arquitetura-computadores), the concepts and history of computer hardware and peripherals were presented. This subject used slides that are available in this repository.
 
 ### Databases I
-
-##### Languages and Tools:
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/-PostgreSQL-0D1117?style=for-the-badge&logo=postgresql&logoColor=316192&labelColor=181e26&textColor=0D1117">&nbsp;
-  <img src="https://img.shields.io/badge/-PostgreSQL-0D1117-white?style=for-the-badge&logo=postgresql&logoColor=316192&labelColor=f0f0f0&textColor=0D1117">&nbsp;
-</picture>
 
 <br>
 <br>
